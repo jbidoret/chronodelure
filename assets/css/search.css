@@ -1,0 +1,91 @@
+.search-header{
+  padding: var(--padding);
+}
+.search-header h1 {
+  font-size: var(--huge-size);
+}
+
+#search-overlay {
+  position: fixed;
+  z-index: 1000;
+  top: 0; right: 0; bottom: 0; left: 0;
+  display: none;
+}
+.searching { pointer-events: none; }
+.searching ~ #search-overlay {display: block;}
+.searching  .logo, #menu, #search-bar{ pointer-events: all;}
+
+.search-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  top: 0.1em;
+}
+.search-form { 
+  display: none;
+  position: relative;
+  z-index: 1001;
+  justify-content: space-between;
+  border: 3px solid;
+  padding: .25em .75em .05em;
+  text-transform: uppercase;
+  font-family: var(--basefamily);
+  letter-spacing: .05em;
+  font-size: .85em;
+  background: white;
+  border-radius: 1em;
+  margin-top: -.2em;
+}
+.search-icon {  height: 1.25em;}
+#search-bar.opened #search-navbutton { display: none;}
+#search-bar.opened #search-button {
+  top: -.1em;
+}
+#search-bar.opened .search-form {  display: flex; }
+.search-form .search-button { top: 0; }
+.search-input {
+  border: none;
+  padding: 0;
+  outline: none;
+  /* font-size: .85em; */
+  min-width: 10em;
+  flex: 1;
+  font-family: var(--basefamily);
+}
+
+
+.search-no-result {
+  margin: var(--margin) 0;
+  padding: 0 var(--padding);
+}
+
+#search-input {
+  margin-right: .25em;
+  width: calc(100% - 40px);
+}
+
+.search-query {
+  
+}
+.search-query  .search-form { 
+  display: flex;
+  
+}
+
+.people {
+  display: grid;
+  grid-template-columns: var(--yearwidth) 6fr 2fr;
+  grid-gap: 0 var(--margin);
+  margin: var(--margin) 0;
+}
+.people h2, .people .text {
+  grid-column: 2;
+}
+
+.people h2 {
+  color: var(--accent-color);
+  font-size: 1.5em;
+  margin-bottom: .5em;
+  font-weight: normal;
+}

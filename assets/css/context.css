@@ -1,0 +1,24 @@
+.session-context {
+  margin-bottom: var(--margin);
+}
+.session-context p{
+  font-size: .85em;
+  font-variation-settings: "opsz" 10;
+}
+.session-context h3 {
+  color: var(--second-color);
+  line-height: var(--line-height);
+}
+.session-context p,
+.session-context img {
+  max-width: 100%;
+}
+.context-cover{
+  margin: var(--padding) 0;
+}
+
+.context-source a{
+  text-decoration: underline;
+  text-underline-offset: .25em;
+  text-decoration-color: var(--second-color);
+}

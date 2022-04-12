@@ -1,0 +1,15 @@
+Title: Personnalités
+
+options:
+  changeSlug: false
+  changeTitle: false
+  duplicate: false
+  delete: false
+  changeStatus: false
+
+sections:
+  peoples:
+    type: pages
+    headline: Personnalités
+    template: people
+    

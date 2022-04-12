@@ -1,0 +1,27 @@
+title: Contexte
+
+columns:
+  - width: 2/3   
+    sections:
+      data:
+        type: fields   
+        fields:
+          link:
+            label: Lien externe
+            type: url
+          introduction:
+            label: Texte
+            type: markdown
+            # maxlength: 300
+            help: Maximum 250 caractères
+  - width: 1/3
+    sections:
+      fields:
+        type: fields
+        fields:
+          cover:
+            type: files
+            multiple: false
+      files: 
+        type: files
+        headline: Fichiers

@@ -1,0 +1,28 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:16px">
+  <style>
+    /* We will write some styles here! */
+    #aiguille {
+      transform-origin: 50% 50%;
+      animation: turn linear 20s infinite;
+      will-change: transform;
+    }
+    
+    @keyframes turn {
+      0% {       
+        transform: rotate(0);
+      }
+      100% {       
+        transform: rotate(360deg);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation: none !important;
+        transition-duration: 0s !important;
+      }
+    }
+    @media (prefers-color-scheme: dark) { #montre { fill: white;} #aiguille { stroke: black;} }
+  </style>
+  <circle cx="16" cy="16" r="16" fill="#000000" id="montre"/>
+  <line x1="16" y1="16" x2="16" y2="7" stroke="#ffffff" stroke-width="4" stroke-linecap="round" id="aiguille"/>
+</svg>

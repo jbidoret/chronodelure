@@ -1,0 +1,15 @@
+#footer{
+  border-top: var(--borderstyle);
+  padding: var(--padding);
+  margin-bottom: 2em;
+  font-size: .85em;
+}
+#footer p + p::before {
+  content:"—";
+  display: block;
+  margin: 1em 0;
+}
+#footer a {
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}

@@ -1,2 +1,27 @@
-preset: pages
-unlisted: true
+title: Site
+columns:
+  - width: 1/2
+    sections:
+      decades:
+        headline: Décennies
+        type: pages
+        create: decade
+        templates:
+          - decade
+      fields:
+        type: fields
+        fields :
+          footer:
+            type: markdown
+            label: Pied de page
+
+
+  - width: 1/2
+    sections:
+      pages:
+        type: pages
+        create: default
+        templates:
+          - home
+          - default
+          - peoples

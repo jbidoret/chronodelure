@@ -10,6 +10,14 @@ Icon
 /media/*
 !/media/index.html
 
+# Content files
+# ---------------
+
+/content/*
+!/content/error/error.txt
+!/content/home/home.txt
+!/content/site.txt
+
 # Lock files
 # ---------------
 

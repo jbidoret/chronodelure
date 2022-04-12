@@ -1,1 +1,24 @@
 Title: Home
+
+----
+
+Text:
+
+Depuis 1953, dans le village de Lurs, se réunissent des graphistes et des typographes animés par la passion des lettres, des signes et des échanges.
+Ce site réunit les archives de 70 ans de programmation des Rencontres internationales de Lure.
+
+----
+
+Metadescription: 
+
+----
+
+Metaimage: 
+
+----
+
+Headline: Welcome to Kirby's Starterkit
+
+----
+
+Subheadline: A fully documented example project

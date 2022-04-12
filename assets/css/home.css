@@ -1,0 +1,89 @@
+.decade {
+  padding: var(--padding);
+}
+.home-intro {
+  padding: 0 var(--padding)
+}
+.home-intro .max {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+.home-intro p {
+  font-size: var(--big-size);
+  line-height: 1.4;
+  padding: var(--padding) 0;
+  font-variation-settings: 'opsz' 65;
+  font-family: var(--basefamily);
+}
+.decades {
+  list-style-type: none;
+  margin: 0;  
+  padding: 0;
+}
+.decade {
+  border-top: var(--borderstyle);
+  scroll-margin-top: calc(var(--headerheight) - 3px);
+}
+#header ~ .decade {
+  border-top: none;
+}
+.decade-header {
+  display: grid;
+  grid-template-columns: 17em 1fr;
+  grid-gap: var(--margin);
+  margin-bottom: 3em;
+}
+.decade-header > .decade-button,
+.decade-header > button {
+  align-self: start;
+  justify-self: start;
+ 
+}
+.decade-title {
+  font-size: 1em;
+  font-size: var(--huge-size);
+  font-weight: normal;
+  word-spacing: -0.15em;
+}
+.decade-intro{
+  font-family: var(--basefamily);
+  /* font-weight: 450; */
+  line-height: 1.4;
+}
+.decade-intro p {
+  font-weight: 200;
+  font-size: 1.5em;
+  margin: 0;
+} 
+
+.decade-subtitle {
+  font-family: var(--basefamily);
+  font-size: 2em;
+  margin: 0 0 .25em;
+  color: var(--accent-color);
+}
+.visible a.decade-button { display: none;}
+.decade-button {
+  border: 3px solid black;
+  padding: .25em .75em .05em;
+  text-transform: uppercase;
+  font-family: var(--basefamily);
+  letter-spacing: .05em;
+  font-size: .85em;
+  background: none;
+  border-radius: 1em;
+  cursor: pointer;
+  margin: 1em 0 0 -3px;
+  /* opacity: .5; */
+  transition: all 150ms;
+}
+.decade-button:hover{
+  color: var(--accent-color);
+}
+.decade:hover .decade-button {
+  opacity: 1;
+  border-color: var(--accent-color);
+}
+.decade-sessions {
+  margin: 0 calc(-1 * var(--padding));
+}

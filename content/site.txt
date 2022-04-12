@@ -1,1 +1,9 @@
-Title: Site Title
+Title: TimeLure
+
+----
+
+Footer: Ce site est dédié à la mise en valeur des archives de la programmation des 70 ans des Rencontres internationales de Lure. Si vous souhaitez y participer, n’hésitez pas ! Toute contribution sera accueillie avec une immense joie et une reconnaissance infinie. Contactez-nous à l’adresse (email: chronologie@delure.org text: chronologie@delure.org).
+
+----
+
+Subtitle: Une chronologie des Rencontres de Lure

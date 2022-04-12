@@ -1,0 +1,27 @@
+title: Personnalité
+
+columns:
+  - width: 2/3
+    sections:
+      meta:
+        type: fields
+        fields:
+          subtitle:
+            label: Sous-titre
+            type: text
+          introduction:
+            type: markdown
+            label: Introduction
+      years:
+        type: pages
+        headline: Années
+        template: session
+        info: "{{page.year}}"
+        
+  - width: 1/3
+    sections:
+      
+      files:
+        headline: Fichiers
+        type: files
+        

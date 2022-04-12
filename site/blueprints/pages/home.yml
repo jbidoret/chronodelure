@@ -1,0 +1,26 @@
+title: Accueil
+
+options:
+  changeSlug: false
+  changeTitle: false
+  duplicate: false
+  delete: false
+  changeStatus: false
+
+fields:
+  text:
+    label: Texte
+    type: markdown
+    size: small
+  
+  metadescription:
+    label: Meta Description
+    type: text
+    width: 1/2
+
+  metaimage:
+    label: Meta Image
+    type: files
+    max: 1
+    width: 1/2    
+

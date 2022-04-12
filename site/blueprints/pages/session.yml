@@ -1,0 +1,113 @@
+title: Session
+
+tabs:
+  content:
+    label: Contenu
+    columns:
+      - width: 2/3
+        sections:
+          data:
+            type: fields
+            fields:
+              subtitle:
+                label: Sous-titre
+                type: writer
+              introduction:
+                label: Introduction – accueil
+                type: writer
+                help: Ne s’affiche que sur la page d’accueil
+              introduction_text:
+                label: Introduction – session
+                type: writer
+                help: Ne s’affiche que sur la page de la session
+      - width: 1/3
+        sections:
+          fields:
+            type: fields
+            fields:
+              year:
+                label: Année
+                type: text
+              cover:
+                type: files
+                label: Image de couverture
+                multiple: false
+              lecturers:
+                type: tags
+                label: Intervenants
+          files:
+            type: files
+            headline: Fichiers
+  medias:
+    label: Médias
+    fields:
+      gallery_title:
+        type: text
+        default: le programme en images
+        label: Titre de la galerie d’images
+      gallery:
+        type: files
+        label: Images 
+        info: "{{file.layout}}"
+        layout: cards
+
+  context:
+    label: Contexte
+    sections:
+      contexts:
+        type: pages
+        template: context
+        headline: Éléments de contexte
+  asides:
+    label: En savoir plus
+    sections:
+      tiroirs:
+        type: fields
+        fields:
+          readmores:
+            type: structure
+            label: En savoir plus
+            help: Ajouter des entrées dépliables
+            fields:
+              title:
+                type: text
+                label: Titre
+              subtitle:
+                type: textarea
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                label: Sous-titre
+              text:
+                type: textarea
+                label: Texte
+          infos:
+            type: info
+            text: Les champs ci-dessous n’apparaissent plus sur le site. Leur contenu doit être déplacé dans les “En savoir plus”
+          text:
+            label: Texte du programme
+            help: À déplacer dans les “En savoir plus” ou dans l’introduction – session
+            type: markdown
+          details:
+            label: Détails
+            help: À déplacer dans les “En savoir plus”
+            type: markdown
+          documents:
+            label: Documents associés
+            help: À déplacer dans les “En savoir plus”
+            type: markdown
+      stories:
+        type: pages
+        template: story
+        headline: Souvenirs
+
+addFields:
+  year:
+    label: Année
+    type: text
+    required: true
+  title:
+    label: Title
+    type: text
+    required: true

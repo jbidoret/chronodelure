@@ -1,0 +1,23 @@
+:root {
+  --basesize: 1rem;
+  --basefamily: 'Antique Olive', sans-serif;
+  --altfamily: 'Source Serif VF', serif;
+  --line-height: 1.45em;
+  --text-color: rgba(0, 0, 0, 0.75);
+  --accent-color: #ff440b;
+  --second-color: #1358d7;
+  --background-color: #fff;
+  --padding: 1rem;
+  --margin: 2rem;
+  --yearwidth: calc(8.5em - var(--margin) / 2);
+  --huge-size: 4em;
+  --big-size : 1.5em;
+  --headerheight: calc( var(--basesize) * 1.5 * 2 + var(--padding) * 2 + 1px);
+  --borderstyle: 3px solid #ddd;
+}
+@media (max-width: 800px) {
+  :root {
+    --padding: 1em;
+    --margin: 1em;
+  }
+}

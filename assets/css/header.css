@@ -1,0 +1,44 @@
+#header {
+  padding: var(--padding);
+  border-bottom: var(--borderstyle);
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: var(--background-color);
+  height: var(--headerheight);
+  /* overflow: hidden; */
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+}
+#header .max{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#header * {
+  font-size: 1rem;
+}
+.logo strong {
+  display: block;
+}
+#nav {
+  display: flex;
+  align-items: flex-start;
+}
+#nav > * {
+  margin-left: 1em;
+}
+
+.nav-decades {
+  display: flex;
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+
+.nav-decades li{
+  margin-left: 1em;
+  font-family: var(--basefamily);
+}
