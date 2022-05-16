@@ -9,7 +9,7 @@
   margin-bottom: 3em;
 }
 .home-intro p {
-  font-size: var(--big-size);
+  /* font-size: var(--big-size); */
   line-height: 1.4;
   padding: var(--padding) 0;
   font-variation-settings: 'opsz' 65;
@@ -52,7 +52,7 @@
 }
 .decade-intro p {
   font-weight: 200;
-  font-size: 1.5em;
+  font-size: 1.25em;
   margin: 0;
 } 
 
