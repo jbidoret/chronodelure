@@ -12,6 +12,9 @@
   align-items: flex-end;
   justify-content: space-between;
 }
+@media (max-height:45rem){
+  #header { position: static; }
+}
 #header .max{
   flex: 1;
   display: flex;

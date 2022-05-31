@@ -10,7 +10,7 @@
   <?php snippet("header.metas") ?>
   
   <?= css("assets/fonts/fonts.css") ?>
-  <?= css(["assets/css/index.css?v2.1", "@auto"]) ?>
+  <?= css(["assets/css/index.css?v2.2", "@auto"]) ?>
   <?= css("assets/glightbox/glightbox.min.css") ?>
 </head>
 <body

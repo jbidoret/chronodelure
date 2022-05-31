@@ -72,20 +72,55 @@
   font-size: inherit;
   
 }
-
+.search-header + .search-header {
+  border-top: var(--borderstyle);
+}
+.ispeople h3 {
+  font-weight: bold;
+  font-size: var(--huge-size);
+  margin-top: -.2em;
+}
 .people {
   display: grid;
   grid-template-columns: var(--yearwidth) 6fr 2fr;
+  grid-template-areas: "year title void" "year people void" "year text void";
   grid-gap: 0 var(--margin);
   margin: var(--margin) 0;
 }
-.people h2, .people .text {
-  grid-column: 2;
+.people h1{
+  grid-area:title ;
 }
+.people h2{
+  grid-area:people ;
+}
+.people .text {
+  grid-area:text ;
+}
+
 
 .people h2 {
   color: var(--accent-color);
   font-size: 1.5em;
   margin-bottom: .5em;
   font-weight: normal;
+}
+
+
+
+@media (max-width:60rem) {
+  .people {  
+    grid-template-columns: 6fr 2fr;
+    grid-template-areas: "title void" "people void" "text void";
+    grid-gap: 0 var(--margin);
+  }
+  .ispeople h3 { transform: scaleX(-1);}
+}
+
+@media (max-width:40rem) {
+  
+  .people {  
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "people" "text";
+  }
+  .ispeople h3 { display: none;}
 }
