@@ -48,6 +48,7 @@ tabs:
       gallery:
         type: files
         label: Images 
+        template: image
         info: "{{file.layout}}"
         layout: cards
 
@@ -82,23 +83,37 @@ tabs:
               text:
                 type: textarea
                 label: Texte
+          tgl:
+            type: toggle
+            label: Afficher les vieux contenus
+            default: false
           infos:
             type: info
+            when:
+              tgl: true
             text: Les champs ci-dessous n’apparaissent plus sur le site. Leur contenu doit être déplacé dans les “En savoir plus”
           text:
             label: Texte du programme
+            when:
+              tgl: true
             help: À déplacer dans les “En savoir plus” ou dans l’introduction – session
             type: markdown
           details:
             label: Détails
+            when:
+              tgl: true
             help: À déplacer dans les “En savoir plus”
             type: markdown
           documents:
             label: Documents associés
+            when:
+              tgl: true
             help: À déplacer dans les “En savoir plus”
             type: markdown
       stories:
         type: pages
+        when:
+          tgl: true
         template: story
         headline: Souvenirs
 

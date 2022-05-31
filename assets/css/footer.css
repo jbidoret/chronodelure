@@ -4,12 +4,37 @@
   margin-bottom: 2em;
   font-size: .85em;
 }
-#footer p + p::before {
-  content:"—";
-  display: block;
+#footer .max > * {
   margin: 1em 0;
+}
+.partners-logos{
+
 }
 #footer a {
   text-decoration: underline;
   text-underline-offset: .25em;
+}
+
+
+
+.partners-logos{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 1em 0;
+}
+.partners-logos a { text-decoration: none;}
+
+.partners-logos img {
+  margin-right: 1em;
+  display: block;
+  width: 150px;
+  height: auto;
+  filter: grayscale(1);
+  transition: all 250ms;
+}
+.partners-logos:hover { filter: grayscale(0);}
+
+@media(max-width:800px){
+  .partners-logos img {width: 110px;}
 }

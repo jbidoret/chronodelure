@@ -1,6 +1,7 @@
 :root {
   --basesize: 1rem;
   --basefamily: 'Antique Olive', sans-serif;
+  /* --basefamily: 'National', sans-serif; */
   --altfamily: 'Source Serif VF', serif;
   --line-height: 1.45em;
   --text-color: rgba(0, 0, 0, 0.75);
@@ -19,5 +20,18 @@
   :root {
     --padding: 1em;
     --margin: 1em;
+  }
+}
+
+
+@media (max-width: 35rem) {
+  :root {
+    --huge-size: 2.5em;
+  }
+}
+
+@media (max-width: 25rem) {
+  :root {
+    --big-size : 1.35em;
   }
 }

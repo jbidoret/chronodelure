@@ -14,36 +14,34 @@
 .searching { pointer-events: none; }
 .searching ~ #search-overlay {display: block;}
 .searching  .logo, #menu, #search-bar{ pointer-events: all;}
+.searching .nav-decades { display: none;}
 
 .search-button {
   background: transparent;
   border: none;
   cursor: pointer;
   position: relative;
-  top: 0.1em;
+  top: 0.25em;
 }
 .search-form { 
   display: none;
   position: relative;
   z-index: 1001;
   justify-content: space-between;
-  border: 3px solid;
-  padding: .25em .75em .05em;
+  border: 3px solid #ddd;
+  padding: .25em .5em .05em;
   text-transform: uppercase;
   font-family: var(--basefamily);
   letter-spacing: .05em;
-  font-size: .85em;
-  background: white;
-  border-radius: 1em;
-  margin-top: -.2em;
+  
+  background: #ddd;
+  /* margin-top: -.2em; */
 }
 .search-icon {  height: 1.25em;}
 #search-bar.opened #search-navbutton { display: none;}
-#search-bar.opened #search-button {
-  top: -.1em;
-}
+
 #search-bar.opened .search-form {  display: flex; }
-.search-form .search-button { top: 0; }
+.search-form .search-button { top: -.1em;}
 .search-input {
   border: none;
   padding: 0;
@@ -52,6 +50,7 @@
   min-width: 10em;
   flex: 1;
   font-family: var(--basefamily);
+  background: transparent;
 }
 
 
@@ -70,6 +69,7 @@
 }
 .search-query  .search-form { 
   display: flex;
+  font-size: inherit;
   
 }
 

@@ -1,8 +1,19 @@
-title: Fichier
+title: Image
+
+accept:
+  type: image
 
 columns:
   - width: 1/2
     sections:
+      annotator:
+        type: annotator
+        tools:
+          - pin
+          - rect
+          - circle
+        storage:
+          markers: markers
       content:
         type: fields
         fields:

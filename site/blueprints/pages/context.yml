@@ -12,6 +12,7 @@ columns:
           introduction:
             label: Texte
             type: markdown
+            extends: fields/md
             # maxlength: 300
             help: Maximum 250 caractères
   - width: 1/3

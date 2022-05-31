@@ -1,0 +1,20 @@
+.default-header{
+  padding: var(--padding);
+}
+.default-header h1 {
+  font-size: var(--huge-size);
+}
+
+.default-article{
+  padding: var(--padding);
+  border-top: var(--borderstyle);
+}
+
+.default-article p {
+  margin-bottom: 1em;
+}
+
+.default-article a {
+  text-decoration: underline;
+  text-underline-offset: .25em;
+}

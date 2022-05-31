@@ -2,6 +2,20 @@
   <footer id="footer">
     <div class="max">
       <?= $site->footer()->kt() ?>
+
+      <div class="partners">
+        <div class="partners-text">
+          <?= $site->partners()->kt() ?>
+        </div>
+        <div class="partners-logos">
+          <?php foreach($site->logos()->toStructure() as $logo):?>
+            <?= r($logo->url()->isNotEmpty(), "<a href='" . $logo->url() . "'>")?>
+            <img src="<?= $logo->logo()->toFile()->url() ?>" alt="<?= $logo->title() ?>">
+            <?= r($logo->url()->isNotEmpty(), "</a>")?>
+          <?php endforeach ?>
+        </div>
+      </div>
+      
     </div>
   </footer>
 

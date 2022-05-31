@@ -5,27 +5,27 @@
   top: 0;
   z-index: 2;
   background: var(--background-color);
-  height: var(--headerheight);
+  min-height: var(--headerheight);
   /* overflow: hidden; */
   z-index: 10001;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 #header .max{
   flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
 }
-#header * {
+.logo, #nav, #search-bar, .search-form {
   font-size: 1rem;
 }
-.logo strong {
-  display: block;
-}
+
 #nav {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 #nav > * {
   margin-left: 1em;
@@ -34,11 +34,94 @@
 .nav-decades {
   display: flex;
   list-style-type: none;
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
-
 
 .nav-decades li{
   margin-left: 1em;
   font-family: var(--basefamily);
+  white-space: nowrap;
+}
+
+#search-bar{
+  flex-shrink: 0;
+}
+.open h1 { display: none;}
+.open #nav {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  border-bottom: var(--borderstyle);
+  height: min-content; */
+  background: white;
+  display: flex;
+}
+.open #nav .nav-decades {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
+}
+.open #nav .nav-decades li {
+  margin: 0 1em 0 0;
+}
+.hamburger {
+  --burgercolor: #000;
+  --burgersize: 1em;
+  display: none;
+  background: none;
+  border:none;
+  top: -.25em;
+  position: relative;
+  width: calc(var(--burgersize) * 1.25);
+  height: var(--burgersize);
+  border-top: 2px solid var(--burgercolor) ;
+  border-bottom: 2px solid var(--burgercolor) ;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.hamburger span {
+  display: block;
+  width: var(--burgersize);
+  text-indent: calc(var(--burgersize) * 2);
+  overflow: hidden;
+  height: 0;
+  width: calc(var(--burgersize) * 1.25);
+  border-top: 2px solid var(--burgercolor) ;
+}
+.open #nav .hamburger span {
+  display: none;
+}
+.open #nav .hamburger::before {
+  content: "";
+  display: block;
+  border-top: 2px solid;
+  transform: rotate(45deg);
+  width: calc(var(--burgersize) * 1.25);
+  position: absolute;
+}
+.open #nav .hamburger::after {
+  content: "";
+  display: block;
+  border-top: 2px solid;
+  transform: rotate(-45deg);
+  width: calc(var(--burgersize) * 1.25);
+  position: absolute;
+}
+.open #nav .hamburger {
+  border: none;
+}
+
+.logo { flex: 2;}
+#nav { flex: 1;}
+@media (max-width:60rem) {
+  .hamburger {
+    display: block;
+  }
+  .nav-decades {
+    display: none;
+  }
+
+  
 }

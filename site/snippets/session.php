@@ -4,10 +4,10 @@
 
       <div class="session-title">
         <a href="<?= $session->url() ?>">
-          <h3><?= $session->title() ?></h3>
+          <h3><?= $session->title()->widont() ?></h3>
           <?php if ($session->subtitle()->isNotEmpty()) :?>
             <div class="session-subtitle">
-              <?= $session->subtitle()->kti()?>
+              <?= $session->subtitle()->kti()->widont()?>
             </div>
           <?php endif ?>
         </a>

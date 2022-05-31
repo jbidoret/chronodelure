@@ -18,27 +18,30 @@ columns:
             type: text
           introduction:
             type: markdown
+            extends: fields/md
             label: Introduction
       years:
         type: pages
         headline: Années
         template: session
+        layout: cardlets
         info: "{{page.year}}"
         
   - width: 1/3
     sections:
-      data:
-        type: fields
-        fields:
-          contributors:
-            type: markdown
-            label: Contributeurs
-      stories:
-        headline: Souvenirs
-        type: pages
-        templates: 
-          - story
       files:
         headline: Fichiers
         type: files
+      # data:
+      #   type: fields
+      #   fields:
+      #     contributors:
+      #       type: markdown
+      #       extends: fields/minimal
+      #       label: Contributeurs
+      # stories:
+      #   headline: Souvenirs
+      #   type: pages
+      #   templates: 
+      #     - story
         

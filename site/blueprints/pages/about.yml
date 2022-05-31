@@ -1,17 +1,10 @@
-title: Accueil
-
-options:
-  changeSlug: false
-  changeTitle: false
-  duplicate: false
-  delete: false
-  changeStatus: false
+title: À propos
 
 fields:
   text:
     label: Texte
     type: markdown
-    extends: fields/minimal
+    extends: fields/md
     size: small
   
   metadescription:

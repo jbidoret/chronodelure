@@ -1,27 +1,76 @@
 title: Site
-columns:
-  - width: 1/2
-    sections:
-      decades:
-        headline: Décennies
-        type: pages
-        create: decade
-        templates:
-          - decade
-      fields:
-        type: fields
-        fields :
+
+
+tabs:
+  pages:
+    columns:
+      - width: 2/3
+        sections:
+          decades:
+            headline: Périodes
+            type: pages
+            create: decade
+            layout: cardlets
+            info: "{{ page.subtitle }}"
+            templates:
+              - decade
+
+      - width: 1/3
+        sections:
+          pages:
+            type: pages
+            templates:
+              - home
+              - default
+              - peoples
+              - about
+  data:
+    label: Informations
+    columns:
+      - width: 2/3
+        fields:
+          subtitle:
+            type: text
+            inline: true
+            label: Sous-titre
           footer:
             type: markdown
+            extends: fields/md
             label: Pied de page
+          partners:
+            type: markdown
+            extends: fields/md
+            label: Partenaires
+          logos:
+            type: structure
+            label: Logos partenaires
+            fields:
+              logo:
+                type: files
+                multiple: false
+              title:
+                type: text
+                label: Titre
+              url:
+                type: url
+                label: URL
 
-
-  - width: 1/2
-    sections:
-      pages:
-        type: pages
-        create: default
-        templates:
-          - home
-          - default
-          - peoples
+          
+      - width: 1/3
+        sections:
+          fields:
+            type: fields
+            fields:
+              metadescription:
+                label: Meta Description
+                type: text
+                width: 1/2
+              metaimage:      
+                label: Meta Image
+                type: files
+                max: 1
+                width: 1/2  
+          files:
+            type: files
+            headline: Tous les fichiers
+                          

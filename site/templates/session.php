@@ -8,10 +8,10 @@
       <div class="max">
         <header class="session-header">
           <h3><?= $page->year()->html() ?></h3>
-          <h1><?= $page->title()->html() ?></h1>
+          <h1><?= $page->title()->html()->widont() ?></h1>
           <?php if ($page->subtitle()->isNotEmpty()) :?>
             <div class="session-subtitle">
-              <?= $page->subtitle()->kti()?>
+              <?= $page->subtitle()->kti()->widont()?>
           </div>
           <?php endif ?>
         </header>

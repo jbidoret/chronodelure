@@ -23,19 +23,27 @@
     <div class="max">
       <h1 class="logo">
         <a href="<?= $site->url() ?>">
-        <strong><?= $site->title() ?></strong>
+        <strong><?= $site->title() ?></strong><br>
         <span><?= $site->subtitle() ?></span>
         </a>
       </h1>
       
-      <nav id="nav">
+      <nav id="nav" class="">
         <ul class="nav-decades">
-        <?php foreach ($site->children()->listed() as $p): ?>
-          <li><a href="<?= $site->url() ?>/#decade-<?= $p->slug() ?>">
+        <?php foreach ($site->children()->listed() as $p): 
+          if($p->intendedTemplate() == "decade"){
+            $url = $site->url() . "/#decade-" . $p->slug();  
+          } else {
+            $url = $p->url();
+          }
+          ?>
+          <li><a href="<?= $url ?>">
           <?= explode( "–", $p->title()->text())[0] ?>
           </a></li>
         <?php endforeach ?>
         </ul>
+
+        <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false" tabindex="0"><span>menu</span></button>
         
         <div id="search-bar">
           

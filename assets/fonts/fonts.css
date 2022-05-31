@@ -51,3 +51,29 @@
        url('source/SourceSerif4Variable-Italic.ttf') format('truetype');
 }
 
+/* national ? */
+
+@font-face {
+  font-family: 'National';
+  src: url('national/NationalWeb-Book.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'National';
+  src: url('national/NationalWeb-BookItalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'National';
+  src: url('national/NationalWeb-Light.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'National';
+  src: url('national/NationalWeb-LightItalic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}

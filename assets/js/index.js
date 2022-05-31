@@ -1,10 +1,9 @@
 // menu
-var selects = document.querySelectorAll('#nav select');
-selects.forEach(select => {
-  select.onchange = (e) => {
-    window.location = select.value
-  }
-});
+var menutoggle = document.querySelector('#hamburger');
+var header = document.querySelector('#header');
+menutoggle.onclick = (e) => {
+  header.classList.toggle('open')
+};
 
 // Lightbox
 // https://github.com/biati-digital/glightbox
@@ -60,7 +59,7 @@ readmoreclose.forEach( (link) => {
 })
 
 
-
+// Faire, défaire et refaire, c’est toujours travailler pour rien :D
 // var ajaxRequest = new (function () {
 
 //   function closeReq () {
