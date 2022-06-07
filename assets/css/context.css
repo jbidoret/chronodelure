@@ -2,7 +2,7 @@
   margin-bottom: var(--margin);
   position: relative;
 }
-.session-context p{
+#home .session-context p{
   font-size: .85em;
   font-variation-settings: "opsz" 10;
 }
@@ -20,7 +20,7 @@
   max-width: 100%;
 }
 
-.session-context img {
+#home .session-context img {
   max-width: 90%;
   /* border: 1px solid #aaa; */
 }
@@ -70,11 +70,11 @@
 
 /* desktop version */
 @media screen and (min-width: 1080px) {
-  .session-context h3 {
+  #home .session-context h3 {
     font-size: 0.8em;
   }
   
-  .session-context p{
+  #home  .session-context p{
     font-size: .65em;
   }
 
@@ -102,11 +102,11 @@
 
 
 @media screen and (min-width: 1200px) {
-  .session-context h3 {
+  #home .session-context h3 {
     font-size: 1em;
   }
   
-  .session-context p{
+ #home .session-context p{
     font-size: .85em;
   }
 }
@@ -234,7 +234,7 @@
     display: inline-block;
   }
 
-  .session-context h3::after{
+  #home .session-context h3::after{
     content: " | ";
     color: var(--text-color);
     padding-left: 1ch; 
@@ -247,30 +247,6 @@
   }
 
 
-    /* .context-group .categorie::before{
-      margin-bottom: 0em;
-    }
-
-    .session .context-group{
-  
-      margin-bottom: 0em;
-    }
-
-
-  .session-context{
-    padding: 0;
-    border: none;
-    display: inline-block;
-
-  }
-
-  
-  .session-context h3{
-
-    font-size: .7em;
-    line-height: .9em;
-    
-  } */
 
 }
 

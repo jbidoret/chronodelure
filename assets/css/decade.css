@@ -143,6 +143,7 @@
     text-align: left;
   }
 
+  
   .session .max {  
     position: relative;
     display: block;
@@ -154,7 +155,13 @@
     grid-template-areas: "year videA" 
                         "title videB" 
                         "image context";
+     grid-row-gap: 0em;
 
+
+  }
+
+  #home .session-title{
+    margin-bottom: var(--margin);
   }
 
   .all-context{
@@ -205,6 +212,11 @@
     margin-right: 1.5em;
   }
 
+  #home .session-cover{
+    margin-bottom: calc(var(--padding)*1.5);
+
+  }
+
   .decade-title{
     text-align: left;
   }
@@ -221,7 +233,7 @@
     margin: 0 .8em;
     grid-template-columns: 1fr;
     grid-template-areas: "year" "title" "image" "context" "technique";
-    grid-row-gap: 0.5em;
+    grid-row-gap: 0em;
   }
 
 
