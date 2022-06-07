@@ -150,7 +150,8 @@
   }
 
   .title-context:hover{
-    text-decoration: underline dotted;
+    transform: rotate(-1.5deg);
+    transition-duration: .5s;
   }
 
   .title-context::before{
@@ -200,6 +201,7 @@
     position: absolute; 
     right: 1em; 
     top: 1em;
+    cursor: pointer; 
   }
 
 

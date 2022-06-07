@@ -66,6 +66,18 @@
 .session-introduction{
   grid-area: image;
 }
+
+.session-introduction figure{
+  overflow: hidden; 
+}
+
+
+
+.session-introduction a:hover img{
+  transform: rotate(-1.5deg);
+  transition-duration: .5s;
+}
+
 .session-cover{
   margin: 0 0 var(--padding) 0;
 }
@@ -164,6 +176,11 @@
     margin-bottom: var(--margin);
   }
 
+  #home .session-title:hover{
+    /* transform: rotate(-2deg);
+    transition-duration: .5s; */
+  }
+
   .all-context{
     grid-area: context;
   }
@@ -171,6 +188,8 @@
   .session .session-introduction{
      z-index: 10;
   }
+
+
 
   .decade-header {
     display: grid;
