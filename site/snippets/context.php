@@ -1,6 +1,11 @@
 <div id="context-<?= $context->slug() ?>" class="session-context" data-type="<?php if ($context->category()->isNotEmpty()) :?><?= $context->category() ?><?php endif ?>">
 
 
+  <h3 class="title-context" data-responsive="phone"><?= $context->title() ?></h3>
+
+
+  <div class="content-context">
+    <button class="close"  data-responsive="phone">✕</button>
   <h3><?= $context->title() ?></h3>
   <?php if ($context->introduction()->isNotEmpty()) :?>
     <div class="context-introduction">
@@ -28,5 +33,6 @@
       </a>
     </p>
   <?php endif ?>
+  </div>
 
 </div>

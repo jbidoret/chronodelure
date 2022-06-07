@@ -70,6 +70,14 @@
   margin: 0 0 var(--padding) 0;
 }
 
+[data-responsive="desktop"]{
+  display: block;
+}
+
+[data-responsive="phone"]{
+  display: none;
+}
+
 .context-group{
   grid-area: context;
 }
@@ -122,9 +130,19 @@
 
 @media (max-width: 1080px) {
 
+
+  [data-responsive="desktop"]{
+    display: none
+  }
+
+  [data-responsive="phone"]{
+    display: block
+  }
+
   .session .session-year{
     text-align: left;
   }
+
   .session .max {  
     position: relative;
     display: block;
@@ -135,9 +153,12 @@
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "year videA" 
                         "title videB" 
-                        "image context"
-                        "image technique";
+                        "image context";
 
+  }
+
+  .all-context{
+    grid-area: context;
   }
 
   .session .session-introduction{

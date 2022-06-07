@@ -5,6 +5,22 @@ menutoggle.onclick = (e) => {
   header.classList.toggle('open')
 };
 
+
+// open context
+let contextes = document.querySelectorAll(".title-context");
+contextes.forEach(function (contexte, index) {
+  let content = contexte.parentNode.querySelector(".content-context");
+  let close = contexte.parentNode.querySelector(".close");
+  contexte.onclick = (e) => {
+    content.style.display = "block";
+  };
+  close.onclick = (e) => {
+    content.style.display = "none";
+  };
+});
+
+
+
 // Lightbox
 // https://github.com/biati-digital/glightbox
 

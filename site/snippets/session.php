@@ -45,18 +45,27 @@
     if ($contexts->count()): ?>
      
 
-     <?php
-    // first we loop through the years and echo the year
-    foreach($contexts as $context => $itemsPerCategory): ?>
-        <aside class="context-group context-group-<?= $context ?>">
+     <?php foreach($contexts as $context => $itemsPerCategory): ?>
+        <aside class="context-group context-group-<?= $context ?>" data-responsive="desktop">
           <p class="categorie"></p>
-          <?php
-          // then we loop through all the items for each year
-          foreach($itemsPerCategory as $item) : ?>
+          <?php foreach($itemsPerCategory as $item) : ?>
           <?php snippet("context", ["context"=>$item]) ?>
           <?php endforeach; ?>
         </aside>
     <?php endforeach ?>
+
+    <aside class="all-context" data-responsive="phone">
+    <?php foreach($contexts as $context => $itemsPerCategory): ?>
+        <aside class="context-group context-group-<?= $context ?>" data-responsive="phone">
+          <p class="categorie"></p>
+          <?php foreach($itemsPerCategory as $item) : ?>
+          <?php snippet("context", ["context"=>$item]) ?>
+          <?php endforeach; ?>
+        </aside>
+    <?php endforeach ?>
+    <aside>
+
+
      
 
 
