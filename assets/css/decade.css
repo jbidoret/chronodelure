@@ -5,22 +5,22 @@
 }
 
 .session {
-  padding: var(--padding);
+  padding: calc(var(--padding)*2) 0;
   border-top: var(--borderstyle);
 }
 .session .max {  
   position: relative;
   display: grid;
-
-
   grid-template-columns: 2fr 5fr 2fr;
-
-  grid-template-areas: "year title title" 
+  grid-template-areas: "year title vide" 
                         "context image technique";
   grid-row-gap: var(--padding);
   grid-column-gap: calc(var(--margin)*1.2);
   /* margin-bottom: var(--margin); */
 }
+
+
+
 .session-year {
   font-family: var(--basefamily);
   /* position: sticky;
@@ -70,7 +70,7 @@
   margin: 0 0 var(--padding) 0;
 }
 
-.context-group-typographie{
+.context-group{
   grid-area: context;
 }
 
@@ -118,16 +118,100 @@
   border: none;
 }
 
+#home .session-introduction-text{ display: none;}
 
-@media (max-width:60rem) {
-  .session .max {  
-    grid-template-columns: 6fr 2fr;
-    grid-template-areas: "year year" "title title" "image context";
-    grid-gap: 0 var(--margin);
+@media (max-width: 1080px) {
+
+  .session .session-year{
+    text-align: left;
   }
+  .session .max {  
+    position: relative;
+    display: block;
+    margin: 0 2em;
+    /* min-height: 54vw; */
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "year videA" 
+                        "title videB" 
+                        "image context"
+                        "image technique";
+
+  }
+
+  .session .session-introduction{
+     z-index: 10;
+  }
+
+  .decade-header {
+    display: grid;
+    grid-template-columns: 2fr 8fr 0fr;
+  }
+
+  .decade-title{
+    text-align: right;
+    font-size: 1.5em;
+  }
+
+  .decade-intro p{
+    max-height: 
+  }
+
 }
 
-@media (max-width:40rem) {
+
+@media (max-width: 700px) {
+
+
+  .decade-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  .session-year,
+  .session-title,
+  .context-group{
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  .decade-title{
+    text-align: left;
+  }
+
+  .decade-intro h3{
+    margin-bottom: 0.5em;
+  }
+
+  .session{
+   padding-bottom: 0;
+
+  }
+  .session .max {  
+    margin: 0 .8em;
+    grid-template-columns: 1fr;
+    grid-template-areas: "year" "title" "image" "context" "technique";
+    grid-row-gap: 0.5em;
+  }
+
+
+  .context-group-technique{
+    grid-area: technique;
+  }
+
+  .session-title, .session-year {
+    font-size: 1em;
+  }
+
+  
+
+}
+
+/* @media (max-width: 40rem) {
   .session .max {  
     grid-template-columns: 1fr;
     grid-template-areas: "year" "title" "image" "context";
@@ -149,4 +233,4 @@
   .session-aside{
     grid-template-columns:1fr ;
   }
-}
+} */

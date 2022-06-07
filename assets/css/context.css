@@ -6,10 +6,16 @@
   font-size: .85em;
   font-variation-settings: "opsz" 10;
 }
+
+
 .session-context h3 {
   color: var(--second-color);
   line-height: var(--line-height);
 }
+
+
+
+
 .session-context p {
   max-width: 100%;
 }
@@ -33,12 +39,8 @@
 
 
 
-
-
-
 .context-group{
   position: relative; 
-  margin-top: 2em;
 }
 
 .context-group .categorie::before{
@@ -54,6 +56,45 @@
 
 
 
+
+.context-group-technique .categorie::before{
+  content: "Contexte technique";
+}
+
+.context-group-technique h3{
+  color: #1b5700;
+}
+
+
+
+@media screen and (max-width: 1080px) {
+
+  #home .session-context p,
+  #home .session-context figure{
+    display: none; 
+  }
+
+}
+
+
+@media screen and (min-width: 1080px) {
+  .session-context h3 {
+    font-size: 0.8em;
+  }
+  
+  .session-context p{
+    font-size: .65em;
+  }
+
+
+
+.context-group{
+  margin-top: 2em;
+}
+
+
+
+
 .context-group-typographie{
   text-align: right;
 }
@@ -63,10 +104,86 @@
 }
 
 
-.context-group-technique .categorie::before{
-  content: "Contexte technique";
+
+
 }
 
-.context-group-technique h3{
-  color: #1b5700;
+
+@media screen and (min-width: 1200px) {
+  .session-context h3 {
+    font-size: 1em;
+  }
+  
+  .session-context p{
+    font-size: .85em;
+  }
+}
+
+
+@media (max-width: 1080px) {
+
+
+  .session .context-group{
+    /* width: 25%;
+    margin-left: calc(70% + var(--margin)); */
+    margin-bottom: 2em;
+  }
+
+ 
+
+  .session-context {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 0;
+    padding: .6em .8em .5em .8em;
+    margin-bottom: calc(var(--margin)*0.5)!important;
+  }
+
+  .session-context h3{
+    font-size: .9em;
+    line-height: 1em;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+
+  .session{
+    margin-top: 1em;
+  }
+
+    .context-group .categorie::before{
+      margin-bottom: 0em;
+    }
+
+    .session .context-group{
+  
+      margin-bottom: 0em;
+    }
+
+
+  .session-context{
+    padding: 0;
+    border: none;
+    display: inline-block;
+
+  }
+
+  .session-context h3::after{
+    content: " | ";
+    color: var(--text-color);
+  
+  }
+
+  .session-context:last-of-type h3::after{
+    display: none;
+  }
+  .session-context h3{
+
+    font-size: .7em;
+    line-height: .9em;
+    
+  }
+
 }
