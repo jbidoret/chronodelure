@@ -1,6 +1,6 @@
 <div id="context-<?= $context->slug() ?>" class="session-context" data-type="<?php if ($context->category()->isNotEmpty()) :?><?= $context->category() ?><?php endif ?>">
 
-  <p class="categorie"></p>
+
   <h3><?= $context->title() ?></h3>
   <?php if ($context->introduction()->isNotEmpty()) :?>
     <div class="context-introduction">

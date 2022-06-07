@@ -1,5 +1,6 @@
 .session-context {
   margin-bottom: var(--margin);
+  position: relative;
 }
 .session-context p{
   font-size: .85em;
@@ -9,10 +10,16 @@
   color: var(--second-color);
   line-height: var(--line-height);
 }
-.session-context p,
-.session-context img {
+.session-context p {
   max-width: 100%;
 }
+
+.session-context img {
+  max-width: 90%;
+  /* border: 1px solid #aaa; */
+}
+
+
 .context-cover{
   margin: var(--padding) 0;
 }
@@ -23,10 +30,43 @@
   text-decoration-color: var(--second-color);
 }
 
-.session-context .categorie::before{
-  content: "Contexte (typo)graphique";
+
+
+
+
+
+
+.context-group{
+  position: relative; 
+  margin-top: 2em;
 }
 
-.session-context[data-type="technique"] .categorie::before{
+.context-group .categorie::before{
+  content: "Contexte (typo)graphique";
+  font-family: var(--basefamily);
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+  font-size: 0.5em;
+  margin-bottom: 1.5em;
+  display: block;
+  
+}
+
+
+
+.context-group-typographie{
+  text-align: right;
+}
+
+.context-group-typographie img{
+  margin-left: 10%;
+}
+
+
+.context-group-technique .categorie::before{
   content: "Contexte technique";
+}
+
+.context-group-technique h3{
+  color: #1b5700;
 }

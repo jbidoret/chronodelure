@@ -2,11 +2,11 @@
   padding: var(--padding);
 }
 .home-intro {
-  padding: 0 var(--padding)
+  padding: 0.5em var(--padding);
 }
 .home-intro .max {
-  margin-top: 3em;
-  margin-bottom: 3em;
+  /* margin-top: 3em; */
+  /* margin-bottom: 3em; */
 }
 .home-intro p {
   /* font-size: var(--big-size); */
@@ -32,6 +32,7 @@
   grid-template-columns: 17em 1fr;
   grid-gap: var(--margin);
   margin-bottom: 3em;
+  /* display: none; */
 }
 @media (max-width:60rem) {
   .decade-header {  

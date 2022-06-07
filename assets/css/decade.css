@@ -11,9 +11,14 @@
 .session .max {  
   position: relative;
   display: grid;
-  grid-template-columns: var(--yearwidth) 6fr 2fr;
-  grid-template-areas: "year title title" "people image context";
-  grid-gap: var(--padding) var(--margin);
+
+
+  grid-template-columns: 2fr 5fr 2fr;
+
+  grid-template-areas: "year title title" 
+                        "context image technique";
+  grid-row-gap: var(--padding);
+  grid-column-gap: calc(var(--margin)*1.2);
   /* margin-bottom: var(--margin); */
 }
 .session-year {
@@ -24,6 +29,7 @@
   font-size: var(--big-size);
   font-weight: bold;
   grid-area: year;
+  text-align: right
 }
 #decade-sessions .session-lecturers {
   grid-area: people;
@@ -64,10 +70,14 @@
   margin: 0 0 var(--padding) 0;
 }
 
-.session-aside{
-  /* padding-top: calc(var(--basesize) * 1.5 + var(--padding) * 2); */
+.context-group-typographie{
   grid-area: context;
 }
+
+.context-group-technique{
+  grid-area: technique;
+}
+
 
 .prevnext {
   border-bottom: var(--borderstyle);

@@ -41,13 +41,25 @@
 
       
     <?php
-    $contexts = $session->children()->listed()->template("context");
+    $contexts = $session->children()->listed()->template("context")->groupBy('category');
     if ($contexts->count()): ?>
-      <!-- <aside class="session-aside"> -->
-        <?php foreach ($contexts as $context) :?>
-          <?php snippet("context", ["context"=>$context]) ?>
-        <?php endforeach ?>
-      <!-- </aside> -->
+     
+
+     <?php
+    // first we loop through the years and echo the year
+    foreach($contexts as $context => $itemsPerCategory): ?>
+        <aside class="context-group context-group-<?= $context ?>">
+          <p class="categorie"></p>
+          <?php
+          // then we loop through all the items for each year
+          foreach($itemsPerCategory as $item) : ?>
+          <?php snippet("context", ["context"=>$item]) ?>
+          <?php endforeach; ?>
+        </aside>
+    <?php endforeach ?>
+     
+
+
     <?php endif ?>
   </div>
 </article>
