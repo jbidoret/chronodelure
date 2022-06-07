@@ -149,9 +149,6 @@
 @media (max-width: 700px) {
 
 
-  .session{
-    margin-top: 1em;
-  }
 
     .context-group .categorie::before{
       margin-bottom: 0em;
