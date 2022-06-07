@@ -22,3 +22,11 @@
   text-underline-offset: .25em;
   text-decoration-color: var(--second-color);
 }
+
+.session-context .categorie::before{
+  content: "Contexte (typo)graphique";
+}
+
+.session-context[data-type="technique"] .categorie::before{
+  content: "Contexte technique";
+}

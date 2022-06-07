@@ -9,6 +9,12 @@ columns:
           link:
             label: Lien externe
             type: url
+          category:
+            label: Categorie
+            type: radio
+            options:
+              technique: Contexte technique
+              typographie: Contexte (typo)graphique
           introduction:
             label: Texte
             type: markdown

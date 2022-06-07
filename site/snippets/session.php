@@ -43,11 +43,11 @@
     <?php
     $contexts = $session->children()->listed()->template("context");
     if ($contexts->count()): ?>
-      <aside class="session-aside">
+      <!-- <aside class="session-aside"> -->
         <?php foreach ($contexts as $context) :?>
           <?php snippet("context", ["context"=>$context]) ?>
         <?php endforeach ?>
-      </aside>
+      <!-- </aside> -->
     <?php endif ?>
   </div>
 </article>
