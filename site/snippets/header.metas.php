@@ -45,6 +45,8 @@
   <meta property="og:image" content="<?= $og_cover->url() ?>">
   <meta property="og:image:width" content="<?= $og_cover->width() ?>">
   <meta property="og:image:height" content="<?= $og_cover->height() ?>">
+  <?php else : ?>
+  <meta name="twitter:image" content="http://chronologie.delure.org/media/pages/1952-1959/1952-naissance-des-rencontres-de-lure/7f349bf1f8-1646237036/an-10-lure-village-lurs-800x.jpg" />
   <?php endif ?>
 
   <meta name="twitter:card" content="summary_large_image" />
