@@ -22,7 +22,6 @@
 
 #home .session-context img {
   max-width: 90%;
-  /* border: 1px solid #aaa; */
 }
 
 
@@ -39,10 +38,10 @@
 
 
 
+/* HOME */
 .context-group{
   position: relative; 
 }
-
 .context-group .categorie::before{
   content: "Contexte (typo)graphique";
   font-family: var(--basefamily);
@@ -51,21 +50,18 @@
   font-size: 0.6em;
   margin-bottom: 1.5em;
   display: block;
-  
 }
-
-
-
-
 .context-group-technique .categorie::before{
   content: "Contexte technique";
 }
-
 .context-group-technique h3{
   color: #1b5700;
 }
 
-
+/* Single page */
+[data-template="session"] [data-type="typographie"] h3{
+  color: #1b5700;
+}
 
 
 /* desktop version */
@@ -150,8 +146,7 @@
   }
 
   .title-context:hover{
-    transform: rotate(-1.5deg);
-    transition-duration: .5s;
+    text-decoration: underline
   }
 
   .title-context::before{

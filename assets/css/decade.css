@@ -69,12 +69,12 @@
 
 .session-introduction figure{
   overflow: hidden; 
+  padding: 0;
 }
 
 
-
 .session-introduction a:hover img{
-  transform: rotate(-1.5deg);
+  transform: scale(1.03);
   transition-duration: .5s;
 }
 
@@ -176,10 +176,7 @@
     margin-bottom: var(--margin);
   }
 
-  #home .session-title:hover{
-    /* transform: rotate(-2deg);
-    transition-duration: .5s; */
-  }
+
 
   .all-context{
     grid-area: context;

@@ -552,6 +552,13 @@ h2 + .main-text {
 
 }
 
+@media (min-width: 1080px) {
+    [data-template="session"] .session-context {
+        border-right: 1px solid #cfcfcf;
+        padding-right: var(--margin);
+    }
+}
+
 
 
 
