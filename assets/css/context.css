@@ -1,18 +1,30 @@
 .session-context {
   margin-bottom: var(--margin);
+  position: relative;
 }
-.session-context p{
+#home .session-context p{
   font-size: .85em;
   font-variation-settings: "opsz" 10;
 }
+
+
 .session-context h3 {
   color: var(--second-color);
   line-height: var(--line-height);
 }
-.session-context p,
-.session-context img {
+
+
+
+
+.session-context p {
   max-width: 100%;
 }
+
+#home .session-context img {
+  max-width: 90%;
+}
+
+
 .context-cover{
   margin: var(--padding) 0;
 }
@@ -21,4 +33,229 @@
   text-decoration: underline;
   text-underline-offset: .25em;
   text-decoration-color: var(--second-color);
+}
+
+
+
+
+/* HOME */
+.context-group{
+  position: relative; 
+}
+.context-group .categorie::before{
+  content: "Contexte (typo)graphique";
+  font-family: var(--basefamily);
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+  font-size: 0.6em;
+  margin-bottom: 1.5em;
+  display: block;
+}
+.context-group-technique .categorie::before{
+  content: "Contexte technique";
+}
+.context-group-technique h3{
+  color: #1b5700;
+}
+
+/* Single page */
+[data-template="session"] [data-type="typographie"] h3{
+  color: #1b5700;
+}
+
+
+/* desktop version */
+@media screen and (min-width: 1080px) {
+  #home .session-context h3 {
+    font-size: 0.8em;
+  }
+  
+  #home  .session-context p{
+    font-size: .65em;
+  }
+
+
+
+.context-group{
+  margin-top: 2em;
+}
+
+
+
+
+.context-group-typographie{
+  text-align: right;
+}
+
+.context-group-typographie img{
+  margin-left: 10%;
+}
+
+
+
+
+}
+
+
+@media screen and (min-width: 1200px) {
+  #home .session-context h3 {
+    font-size: 1em;
+  }
+  
+ #home .session-context p{
+    font-size: .85em;
+  }
+}
+
+
+@media screen and (min-width: 1080px) {
+
+  .content-context{
+    display: block!important; 
+  }
+
+}
+
+
+
+
+
+/* PHONE version */
+@media screen and (max-width: 1080px) {
+
+
+  .context-group .categorie::before{
+    font-size: 0.6em;
+  }
+
+  .session-context{
+    margin-bottom: 0; 
+    padding-bottom: 0; 
+  }
+
+  .context-group{
+    margin-bottom: 2em; 
+  }
+
+  .title-context{
+    margin-bottom: 0.8em; 
+    position: relative; 
+    padding-left: 3ch;
+    font-size: 0.9em;
+    cursor: pointer; 
+  }
+
+  .title-context:hover{
+    text-decoration: underline
+  }
+
+  .title-context::before{
+    content: "☞ ";
+    color: var(--text-color);
+    display: block; 
+    position: absolute;
+    left: 0; 
+  }
+
+  .content-context{
+    display: none;
+    position: fixed;
+    top: var(--headerheight); 
+    width: 70vw;
+    left: 15vw;
+    top: calc(var(--headerheight) + 3em);
+    background-color: white; 
+    z-index: 999;
+    border: 1px solid black;
+    padding: var(--padding) calc(var(--padding)*2);
+
+  }
+
+  .content-context img{
+    max-width: 100%;
+  }
+
+
+  .content-context h3{
+    font-size: 1.4em; 
+    padding-top: 0.5em; 
+  }
+
+  .content-context p{
+    font-size: 1em; 
+  }
+
+  .content-context .context-cover{
+    margin-top: 2em;
+  }
+
+  .content-context button {
+    background: none; 
+    border: none; 
+    font-size: 1.6em;
+    position: absolute; 
+    right: 1em; 
+    top: 1em;
+    cursor: pointer; 
+  }
+
+
+}
+
+
+
+
+@media (max-width: 700px) {
+
+  .context-group{
+    margin-bottom: 1em;
+  }
+
+
+  .context-group .categorie::before{
+    font-size: 0.5em;
+    margin-bottom: 0.2em;
+  }
+
+  .title-context{
+    margin-bottom: 0; 
+    font-size: 0.8em;
+  }
+  .content-context{
+    width: 80vw;
+    left: 10vw;
+    top: calc(var(--headerheight) + 2em);
+  }
+
+  .session-context{
+    display: inline-block;
+  }
+
+  #home .session-context h3::after{
+    content: " | ";
+    color: var(--text-color);
+    padding-left: 1ch; 
+    padding-right: 1ch;
+  
+  }
+
+  .session-context:last-of-type h3::after{
+    display: none;
+  }
+
+
+
+}
+
+
+@media (max-width: 580px) {
+
+  .content-context{
+    width: 100vw;
+    left: 0vw;
+    top: var(--headerheight); 
+    min-height: calc(100vh - var(--headerheight) - 2px)
+  }
+
+
 }

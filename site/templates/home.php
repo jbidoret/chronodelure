@@ -2,13 +2,7 @@
 
 <main id="home">
 
-  <?php if ($page->text()->isNotEmpty()): ?>
-    <section class="home-intro">
-      <div class="max">
-        <?= $page->text()->kt() ?>
-      </div>
-    </section>
-  <?php endif ?>
+ 
     
   <div class="decades">
     <?php
@@ -43,6 +37,15 @@
       </section>
     <?php endforeach ?>
   </div>
+
+
+  <?php if ($page->text()->isNotEmpty()): ?>
+    <section class="home-intro">
+      <div class="max">
+        <?= $page->text()->kt() ?>
+      </div>
+    </section>
+  <?php endif ?>
 
 </main>
 

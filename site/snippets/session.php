@@ -41,13 +41,34 @@
 
       
     <?php
-    $contexts = $session->children()->listed()->template("context");
+    $contexts = $session->children()->listed()->template("context")->groupBy('category');
     if ($contexts->count()): ?>
-      <aside class="session-aside">
-        <?php foreach ($contexts as $context) :?>
-          <?php snippet("context", ["context"=>$context]) ?>
-        <?php endforeach ?>
-      </aside>
+     
+
+     <?php foreach($contexts as $context => $itemsPerCategory): ?>
+        <aside class="context-group context-group-<?= $context ?>" data-responsive="desktop">
+          <p class="categorie"></p>
+          <?php foreach($itemsPerCategory as $item) : ?>
+          <?php snippet("context", ["context"=>$item]) ?>
+          <?php endforeach; ?>
+        </aside>
+    <?php endforeach ?>
+
+    <aside class="all-context" data-responsive="phone">
+    <?php foreach($contexts as $context => $itemsPerCategory): ?>
+        <aside class="context-group context-group-<?= $context ?>" data-responsive="phone">
+          <p class="categorie"></p>
+          <?php foreach($itemsPerCategory as $item) : ?>
+          <?php snippet("context", ["context"=>$item]) ?>
+          <?php endforeach; ?>
+        </aside>
+    <?php endforeach ?>
+    <aside>
+
+
+     
+
+
     <?php endif ?>
   </div>
 </article>

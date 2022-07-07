@@ -1,4 +1,4 @@
-<div id="context-<?= $context->slug() ?>" class="session-context">
+<div id="context-<?= $context->slug() ?>" class="session-context" data-type="<?php if ($context->category()->isNotEmpty()) :?><?= $context->category() ?><?php endif ?>">
   
   <?php if ($context->cover()->isNotEmpty()) :?>
   <figure class="session-context-cover">
@@ -29,3 +29,6 @@
     </div>
 
 </div>
+
+
+

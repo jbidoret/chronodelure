@@ -3,6 +3,7 @@
   padding: var(--padding);
   margin-bottom: 2em;
   font-size: .85em;
+  background: #eaeaea;
 }
 #footer .max > * {
   margin: 1em 0;
