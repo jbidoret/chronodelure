@@ -65,7 +65,7 @@
 
 
 /* desktop version */
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1081px) {
   #home .session-context h3 {
     font-size: 0.8em;
   }
@@ -108,10 +108,14 @@
 }
 
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 1081px) {
 
   .content-context{
     display: block!important; 
+  }
+  .session-context button{
+    display: none;
+
   }
 
 }
@@ -138,7 +142,7 @@
   }
 
   .title-context{
-    margin-bottom: 0.8em; 
+    /* margin-bottom: 0.8em;  */
     position: relative; 
     padding-left: 3ch;
     font-size: 0.9em;
@@ -155,20 +159,24 @@
     display: block; 
     position: absolute;
     left: 0; 
+    font-size: 1.4em;
   }
 
-  .content-context{
-    display: none;
-    position: fixed;
-    top: var(--headerheight); 
-    width: 70vw;
-    left: 15vw;
-    top: calc(var(--headerheight) + 3em);
-    background-color: white; 
-    z-index: 999;
-    border: 1px solid black;
-    padding: var(--padding) calc(var(--padding)*2);
 
+  .context-group button{
+    width: 100%;
+    padding: calc(var(--padding)*0.5);
+    margin-bottom: calc(var(--padding)*0.5);
+
+  }
+
+  .context-group .content-context{
+    display: none;
+
+  }
+
+  .context-group .categorie{
+    /* flex-basis: 100%; */
   }
 
   .content-context img{
@@ -197,6 +205,38 @@
     right: 1em; 
     top: 1em;
     cursor: pointer; 
+   
+  }
+
+  .categorie{
+    /* display: none; */
+  }
+
+  .session-context button {
+
+    /* flex-basis: 50%; */
+    /* flex-shrink: 0;
+    flex-grow: 0; */
+    
+
+    border: 1px dotted #ccc;
+    background: none;
+
+    text-align: left;
+
+  }
+  
+
+  .session-context button img{
+    padding-top: calc(var(--padding)*0.5);
+    max-width: 100%!important;
+    width: 100%;
+    /* width: 140px;
+    height: 140px;
+    object-fit: contain; */
+    /* order: 1; */
+   
+    
   }
 
 
@@ -208,7 +248,8 @@
 @media (max-width: 700px) {
 
   .context-group{
-    margin-bottom: 1em;
+    margin: 0;
+    margin-bottom: var(--padding);
   }
 
 
@@ -227,16 +268,42 @@
     top: calc(var(--headerheight) + 2em);
   }
 
-  .session-context{
-    display: inline-block;
+  .context-group .categorie{
+    padding-bottom: calc(var(--padding)*0.5);
   }
 
-  #home .session-context h3::after{
+  .session-context{
+    margin-top: calc(var(--padding)*0.5);
+  }
+
+  
+  .context-group{
+
+    display: inline-block;
+    width: calc(50vw - var(--padding)*1.5);
+    vertical-align: top;
+
+  }
+
+  .context-group-technique{
+    margin-left: calc(var(--padding)*0.5);
+  }
+
+  /* #home .session-context h3::after{
     content: " | ";
     color: var(--text-color);
     padding-left: 1ch; 
     padding-right: 1ch;
   
+  } */
+
+  .session-context button {
+    
+   
+  }
+
+  .session-context header .title-context {
+    /* order: 2; */
   }
 
   .session-context:last-of-type h3::after{

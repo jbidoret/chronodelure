@@ -46,7 +46,7 @@
      
 
      <?php foreach($contexts as $context => $itemsPerCategory): ?>
-        <aside class="context-group context-group-<?= $context ?>" data-responsive="desktop">
+        <aside class="context-group context-group-<?= $context ?>">
           <p class="categorie"></p>
           <?php foreach($itemsPerCategory as $item) : ?>
           <?php snippet("context", ["context"=>$item]) ?>
@@ -54,7 +54,7 @@
         </aside>
     <?php endforeach ?>
 
-    <aside class="all-context" data-responsive="phone">
+    <!-- <aside class="all-context" data-responsive="phone">
     <?php foreach($contexts as $context => $itemsPerCategory): ?>
         <aside class="context-group context-group-<?= $context ?>" data-responsive="phone">
           <p class="categorie"></p>
@@ -63,7 +63,7 @@
           <?php endforeach; ?>
         </aside>
     <?php endforeach ?>
-    <aside>
+    <aside> -->
 
 
      

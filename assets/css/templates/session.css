@@ -467,7 +467,7 @@ h2 + .main-text {
 
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1081px) {
   .intervenants-bottom{
     display: none; 
   }
@@ -552,7 +552,7 @@ h2 + .main-text {
 
 }
 
-@media (min-width: 1080px) {
+@media (min-width: 1081px) {
     [data-template="session"] .session-context {
         border-right: 1px solid #cfcfcf;
         padding-right: var(--margin);

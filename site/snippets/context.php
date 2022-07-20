@@ -1,8 +1,19 @@
 <div id="context-<?= $context->slug() ?>" class="session-context" data-type="<?php if ($context->category()->isNotEmpty()) :?><?= $context->category() ?><?php endif ?>">
 
 
-  <h3 class="title-context" data-responsive="phone"><?= $context->title() ?></h3>
+  <?php if ($context->cover()->isNotEmpty()) :?>
+    <button class="context-with-img" data-responsive="phone">
+    <h3 class="title-context"><?= $context->title() ?></h3>
+    <?php $image = $context->cover()->toFile() ?>
+    <img loading="lazy" width="<?= $image->width() ?>" height="<?= $image->height() ?>" src="<?= $image->thumb('small')->url()?>" alt="<?= $image->alt()?>" srcset="<?= $image->srcset('small')?>">
+    </button>
+    <?php else: ?>
+      <button data-responsive="phone">
+      <h3 class="title-context"><?= $context->title() ?></h3>
+       </button>
+  <?php endif ?>
 
+  
 
   <div class="content-context">
     <button class="close"  data-responsive="phone">✕</button>

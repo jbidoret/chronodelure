@@ -161,26 +161,51 @@
     display: block;
     margin: 0 2em;
     /* min-height: 54vw; */
-    display: grid;
-    grid-template-columns: 6fr 2fr;
-    grid-template-rows: auto auto auto auto;
-    grid-template-areas: "year videA" 
-                        "title videB" 
-                        "image context";
-     grid-row-gap: 0em;
 
+    display: grid;
+    height: auto;
+
+    grid-template-columns: 6fr 2fr;
+    grid-template-rows:  auto auto  min-content  minmax(auto, 100%) ;
+    grid-template-areas: "year x"
+                          "title x"
+                          "image context"
+                        "image techique"; 
+     grid-row-gap: 0em; 
+
+
+  
 
   }
 
+
+  #home .session-year{
+    /* display: none; */
+  }
   #home .session-title{
     margin-bottom: var(--margin);
+    /* display: none;  */
+
   }
 
+  .session-introduction{
+    grid-area: image;
+    grid-column: 1; 
+    grid-row: 3/5; 
+  }
 
-
-  .all-context{
+  .context-group-typographie{
     grid-area: context;
+    grid-column: 2; 
+    grid-row: 3
   }
+
+  .context-group-technique{
+    grid-area: technique;
+    grid-column: 2; 
+    grid-row: 4
+  } 
+
 
   .session .session-introduction{
      z-index: 10;
@@ -188,7 +213,7 @@
 
 
 
-  .decade-header {
+  /* .decade-header {
     display: grid;
     grid-template-columns: 2fr 8fr 0fr;
   }
@@ -196,11 +221,9 @@
   .decade-title{
     text-align: right;
     font-size: 1.5em;
-  }
+  } */
 
-  .decade-intro p{
-    max-height: 
-  }
+  
 
 }
 
@@ -247,9 +270,11 @@
   }
   .session .max {  
     margin: 0 .8em;
-    grid-template-columns: 1fr;
-    grid-template-areas: "year" "title" "image" "context" "technique";
-    grid-row-gap: 0em;
+    display: block;
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-areas: "year year" 
+                          "title title" "image image" "context technique";
+    grid-row-gap: calc(var(--padding)*0.5); */
   }
 
 
