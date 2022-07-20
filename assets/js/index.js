@@ -6,19 +6,89 @@ menutoggle.onclick = (e) => {
 };
 
 
-// open context
-let contextes = document.querySelectorAll(".title-context");
+/* CONTEXTES POP UP----------- */
+
+
+let contextes = document.querySelectorAll("#home .session-context");
+
+// create popup for contexts
+let body = document.querySelector("body");
+var asidePopup = document.createElement("aside");
+asidePopup.id = "popup"
+body.appendChild(asidePopup);
+
+var buttonPopup = document.createElement("button");
+buttonPopup.id = "popup-close";
+buttonPopup.innerHTML = "×";
+asidePopup.appendChild(buttonPopup);
+buttonPopup.onclick = (e) => {
+  asidePopup.dataset.popupToggle = "close";
+  enableScroll();
+};
+
+var contentPopup = document.createElement("div");
+contentPopup.id = "popup-content";
+asidePopup.appendChild(contentPopup);
+
+
+// toggle on click
 contextes.forEach(function (contexte, index) {
-  let content = contexte.parentNode.querySelector(".content-context");
-  let close = contexte.parentNode.querySelector(".close");
   contexte.onclick = (e) => {
-    content.style.display = "block";
-  };
-  close.onclick = (e) => {
-    content.style.display = "none";
+      console.log("cliqué !")
+      e.preventDefault();
+      let content = contexte.innerHTML;
+      asidePopup.dataset.popupToggle = "open";
+      contentPopup.innerHTML = content;
+      let image = contentPopup.querySelector("img");
+      console.log(image.dataset.popupImg);
+      image.src = image.dataset.popupImg;
+      image.srcset = image.dataset.popupImg;
+      disableScroll();
   };
 });
 
+
+
+/* STOP scroll when popup ----------- */
+// https://stackoverflow.com/questions/4770025/how-to-disable-scrolling-temporarily
+
+function preventDefault(e) {
+  e.preventDefault();
+}
+
+function preventDefaultForScrollKeys(e) {
+  if (keys[e.keyCode]) {
+    preventDefault(e);
+    return false;
+  }
+}
+
+// modern Chrome requires { passive: false } when adding event
+var supportsPassive = false;
+try {
+  window.addEventListener("test", null, Object.defineProperty({}, 'passive', {
+    get: function () { supportsPassive = true; } 
+  }));
+} catch(e) {}
+
+var wheelOpt = supportsPassive ? { passive: false } : false;
+var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
+
+// call this to Disable
+function disableScroll() {
+  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+}
+
+// call this to Enable
+function enableScroll() {
+  window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+}
 
 
 // Lightbox

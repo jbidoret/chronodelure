@@ -135,49 +135,50 @@
   .session-context{
     margin-bottom: 0; 
     padding-bottom: 0; 
+    cursor: pointer;
   }
 
   .context-group{
     margin-bottom: 2em; 
   }
 
-  .title-context{
-    /* margin-bottom: 0.8em;  */
+  .context-group .content-context h3{
     position: relative; 
-    padding-left: 3ch;
     font-size: 0.9em;
     cursor: pointer; 
   }
 
-  .title-context:hover{
-    text-decoration: underline
-  }
 
-  .title-context::before{
-    content: "☞ ";
-    color: var(--text-color);
-    display: block; 
-    position: absolute;
-    left: 0; 
-    font-size: 1.4em;
-  }
-
-
-  .context-group button{
+  .context-group .content-context{
     width: 100%;
     padding: calc(var(--padding)*0.5);
     margin-bottom: calc(var(--padding)*0.5);
+      border: 1px dotted #ccc;
+      background: none;
+      text-align: left;
+  }
+
+
+  
+  .context-group .content-context:hover{
+    border-style: solid;
 
   }
 
-  .context-group .content-context{
-    display: none;
 
+
+
+  .context-group .context-introduction,
+  .context-group .context-source,
+  .context-group .close {
+    display: none; 
   }
 
-  .context-group .categorie{
-    /* flex-basis: 100%; */
+  .context-group .context-cover{
+    margin: 0;
+    margin-top: 1em;
   }
+
 
   .content-context img{
     max-width: 100%;
@@ -187,58 +188,18 @@
   .content-context h3{
     font-size: 1.4em; 
     padding-top: 0.5em; 
+  
   }
 
   .content-context p{
     font-size: 1em; 
   }
 
-  .content-context .context-cover{
-    margin-top: 2em;
-  }
-
-  .content-context button {
-    background: none; 
-    border: none; 
-    font-size: 1.6em;
-    position: absolute; 
-    right: 1em; 
-    top: 1em;
-    cursor: pointer; 
-   
-  }
-
-  .categorie{
-    /* display: none; */
-  }
-
-  .session-context button {
-
-    /* flex-basis: 50%; */
-    /* flex-shrink: 0;
-    flex-grow: 0; */
-    
-
-    border: 1px dotted #ccc;
-    background: none;
-
-    text-align: left;
-
-  }
-  
-
   .session-context button img{
     padding-top: calc(var(--padding)*0.5);
     max-width: 100%!important;
     width: 100%;
-    /* width: 140px;
-    height: 140px;
-    object-fit: contain; */
-    /* order: 1; */
-   
-    
   }
-
 
 }
 
@@ -251,7 +212,6 @@
     margin: 0;
     margin-bottom: var(--padding);
   }
-
 
   .context-group .categorie::before{
     font-size: 0.5em;
@@ -280,31 +240,15 @@
   .context-group{
 
     display: inline-block;
-    width: calc(50vw - var(--padding)*1.5);
+    width: calc(50vw - var(--padding)*1);
     vertical-align: top;
+    padding-left: var(--padding)
 
   }
 
-  .context-group-technique{
-    margin-left: calc(var(--padding)*0.5);
-  }
-
-  /* #home .session-context h3::after{
-    content: " | ";
-    color: var(--text-color);
-    padding-left: 1ch; 
-    padding-right: 1ch;
   
-  } */
 
-  .session-context button {
-    
-   
-  }
 
-  .session-context header .title-context {
-    /* order: 2; */
-  }
 
   .session-context:last-of-type h3::after{
     display: none;
@@ -315,13 +259,73 @@
 }
 
 
-@media (max-width: 580px) {
 
-  .content-context{
+/* POP UP FOR CONTEXTS ---- */
+
+#popup{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 199999;
+}
+
+[data-popup-toggle="open"]{
+  display: block!important;
+}
+
+#popup-content{
+  max-width: 800px;
+  height: 90vh;
+  margin: 0 auto;
+  margin-top: 5vh;
+  background-color: white;
+  padding: calc(var(--padding)*2);
+  overflow: scroll;
+
+}
+
+#popup-content figure{
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#popup-close{ 
+  font-size: 3em;
+  font-weight: bold;
+  width: 1em;
+  height: 1em;
+  line-height: 0;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#popup h3{
+  padding-bottom: 0.5em;
+}
+
+@media screen and (max-width: 900px){
+  #popup-content{
     width: 100vw;
-    left: 0vw;
-    top: var(--headerheight); 
-    min-height: calc(100vh - var(--headerheight) - 2px)
+    max-width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+  }
+
+  #popup-close{
+    color: black;
+  }
+
+  #popup h3{ 
+    margin-top: 28px;
   }
 
 

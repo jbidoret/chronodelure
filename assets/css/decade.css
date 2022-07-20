@@ -16,15 +16,12 @@
                         "context image technique";
   grid-row-gap: var(--padding);
   grid-column-gap: calc(var(--margin)*1.2);
-  /* margin-bottom: var(--margin); */
 }
 
 
 
 .session-year {
   font-family: var(--basefamily);
-  /* position: sticky;
-  top: calc( var(--headerheight) + var(--padding)); */
   align-self: flex-start;
   font-size: var(--big-size);
   font-weight: bold;
@@ -211,18 +208,6 @@
      z-index: 10;
   }
 
-
-
-  /* .decade-header {
-    display: grid;
-    grid-template-columns: 2fr 8fr 0fr;
-  }
-
-  .decade-title{
-    text-align: right;
-    font-size: 1.5em;
-  } */
-
   
 
 }
@@ -233,8 +218,18 @@
   .session{
     padding-top: 1em;
     margin-top: .5em;
-  }
+    padding-bottom: 0;
+ 
+   }
 
+   .session .max {  
+     margin: 0;
+     display: block;
+   }
+ 
+ 
+
+ 
 
   .decade-header {
     display: grid;
@@ -245,10 +240,9 @@
   }
 
   .session-year,
-  .session-title,
-  .context-group{
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+  .session-title {
+    margin-left: 1em;
+    margin-right: 1em;
   }
 
   #home .session-cover{
@@ -264,19 +258,6 @@
     margin-bottom: 0.5em;
   }
 
-  .session{
-   padding-bottom: 0;
-
-  }
-  .session .max {  
-    margin: 0 .8em;
-    display: block;
-    /* grid-template-columns: 1fr 1fr;
-    grid-template-areas: "year year" 
-                          "title title" "image image" "context technique";
-    grid-row-gap: calc(var(--padding)*0.5); */
-  }
-
 
   .context-group-technique{
     grid-area: technique;
@@ -289,27 +270,3 @@
   
 
 }
-
-/* @media (max-width: 40rem) {
-  .session .max {  
-    grid-template-columns: 1fr;
-    grid-template-areas: "year" "title" "image" "context";
-  }
-  .session-aside{
-    display: grid;
-    grid-template-columns:1fr 1fr;
-    grid-gap: var(--padding);
-    margin-top: 1em;
-  }
-  .session-context {
-    margin-bottom: 0 !important;
-  }
-}
-
-
-@media (max-width:25rem) {
-  
-  .session-aside{
-    grid-template-columns:1fr ;
-  }
-} */
