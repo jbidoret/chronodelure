@@ -77,3 +77,34 @@
   font-weight: 400;
   font-style: italic;
 }
+
+
+@font-face {
+  src: url('fern/Fern_Web/fonts/FernVariable-Roman-VF.woff2') format("woff2"),
+       url('fern/Fern_Web/fonts/FernVariable-Roman-VF.woff') format("woff");
+  font-family: 'Fern Web';
+  font-style: normal;
+  font-weight: 400 800;
+  }
+
+@font-face {
+  src: url('fern/Fern_Web/fonts/FernVariable-Italic-VF.woff2') format("woff2"),
+       url('fern/Fern_Web/fonts/FernVariable-Italic-VF.woff') format("woff");
+  font-family: 'Fern Web';
+  font-style: italic;
+  font-weight: 400 800;
+  }
+
+@font-face {
+  src: url('roboto/RobotoSerif.ttf') format("truetype");
+  font-family: 'Roboto Serif';
+  font-style: normal;
+  font-weight: 400 800;
+  }
+
+@font-face {
+  src: url('roboto/RobotoSerif-Italic.ttf') format("truetype");
+  font-family: 'Roboto Serif';
+  font-style: italic;
+  font-weight: 400 800;
+  }
