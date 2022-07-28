@@ -254,7 +254,22 @@
     display: none;
   }
 
-
+  /* ajout Julien 28/07/2022 */
+  .context-group .context-cover {
+    margin: 0;
+    max-width: 25%;
+  }
+  .context-group {
+    display: block;
+    width: auto;
+    padding: 0 var(--padding);
+  }
+  .context-group .content-context {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+  }
 
 }
 
