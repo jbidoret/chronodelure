@@ -10,15 +10,15 @@
   <?php snippet("header.metas") ?>
   
   <?= css("assets/fonts/fonts.css") ?>
-  <?= css(["assets/css/index.css?v2.2", "@auto"]) ?>
+  <?= css(["assets/css/index.css?v2.3", "@auto"]) ?>
   <?= css("assets/glightbox/glightbox.min.css") ?>
   <?php if (isset($_COOKIE["font"])) : $font = $_COOKIE["font"]; ?>
     <style>
       :root {
-        --altfamily: <?= $font ?>, serif;
+        --serif: <?= $font ?>, serif;
         <?php switch ($font) {
           case 'Fern Web':
-            echo '--lh-adjustment:1.15; --fs-adjustment:1.1}';
+            echo '--lh-adjustment:1.1; --fs-adjustment:1.05}';
             echo '#changefont-fern { background-color: var(--accent-color) }';
             break;
           case 'Source Serif VF':
@@ -26,7 +26,7 @@
             echo '#changefont-source { background-color: var(--accent-color) }';
             break;
           case 'Roboto Serif':
-            echo '--lh-adjustment:1.15; --fs-adjustment:1}';
+            echo '--lh-adjustment:1.1; --fs-adjustment:.96}';
             echo '#changefont-roboto { background-color: var(--accent-color) }';
             break;
         } ?>
