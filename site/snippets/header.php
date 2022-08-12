@@ -30,6 +30,7 @@
             echo '#changefont-roboto { background-color: var(--accent-color) }';
             break;
         } ?>
+      }
     </style>
   <?php endif ?>
 </head>
