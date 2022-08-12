@@ -475,7 +475,7 @@ h2 + .main-text {
 
 .session-contexts {
   border-top: var(--borderstyle);
-  padding: var(--margin);
+  padding: var(--margin) var(--padding);
 }
 
 .session-gallery + .session-contexts {
@@ -523,6 +523,12 @@ h2 + .main-text {
   grid-column: 1;
 }
 
+[data-template="session"] .session-context .session-context-details p{
+    font-family: var(--serif);
+    font-size: calc(1rem * var(--fs-adjustment, 1) * 0.85);
+    line-height: calc(var(--line-height) * var(--lh-adjustment, 1) );
+}
+
 @media (max-width: 1080px) {
   .session-contexts-title {
     padding-left: 0;
@@ -546,6 +552,10 @@ h2 + .main-text {
   [data-template="session"] .session-context {
     border-right: 1px solid #cfcfcf;
     padding-right: var(--margin);
+  }
+  [data-template="session"] .session-context:last-of-type {
+    border-right: none;
+    padding-right: 0;
   }
 }
 
