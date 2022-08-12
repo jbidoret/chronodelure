@@ -11,14 +11,16 @@ tabs:
             fields:
               subtitle:
                 label: Sous-titre
-                type: writer
+                type: text
               introduction:
                 label: Introduction – accueil
-                type: writer
+                type: markdown
+                extends: fields/minimal
                 help: Ne s’affiche que sur la page d’accueil
               introduction_text:
                 label: Introduction – session
-                type: writer
+                type: markdown
+                extends: fields/minimal
                 help: Ne s’affiche que sur la page de la session
       - width: 1/3
         sections:
