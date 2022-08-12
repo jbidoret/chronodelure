@@ -61,11 +61,13 @@
             <div class="max main-text">
               <?php e($readmore->title()->isNotEmpty(), "<h3>" . $readmore->title() . "</h3>")  ?>
               <button class="readmore-close">Fermer</button>
-              <?php if($readmore->subtitle()->isNotEmpty()) : ?>
-                <p><?= $readmore->subtitle()->kti() ?></p>
-              <?php endif ?>
-              <div class="readmore-text">
-                <?= $readmore->text()->kt() ?>
+              <div>
+                <?php if($readmore->subtitle()->isNotEmpty()) : ?>
+                  <p><?= $readmore->subtitle()->kti() ?></p>
+                <?php endif ?>
+                <div class="readmore-text">
+                  <?= $readmore->text()->kt() ?>
+                </div>
               </div>
             </div>
           </div>
