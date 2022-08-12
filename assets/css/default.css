@@ -8,6 +8,9 @@
 .default-article{
   padding: var(--padding);
   border-top: var(--borderstyle);
+  font-family: var(--serif);
+  font-size: calc(1rem * var(--fs-adjustment, 1));
+  line-height: calc(var(--line-height) * var(--lh-adjustment, 1));
 }
 
 .default-article p {
@@ -21,6 +24,7 @@
 
 [data-slug="a-propos"] .default-header h1{
   font-size: 2.5em;
+  margin-top: .1em;
 }
 
 hr {
@@ -41,9 +45,17 @@ hr {
 }
 .fontchanger button {
   background: black;
-  border-radius: 1em;
   border: none;
   color: white;
   padding: .35em 1.5em .35em;
   cursor: pointer;
+}
+.buttons{display: flex;}
+.buttons :first-child {
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+.buttons :last-child {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
 }

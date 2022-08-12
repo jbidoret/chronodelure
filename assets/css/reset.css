@@ -1,16 +1,16 @@
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: #eaeaea;}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
-  font-family: var(--altfamily);
   font-size: var(--basesize);
+  font-family: var(--sans);
   color: var(--text-color);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--background-color);
-  line-height: calc(var(--line-height) * var(--lh-adjustment, 1));
+  line-height: 1.2;
 }
 
 *,
@@ -29,7 +29,6 @@ h1,
 h2,
 h3 {
   font-weight: 400;
-  font-family: var(--basefamily);
 }
 h2 {
   font-weight: bold;
@@ -40,6 +39,7 @@ h3 {
 p,
 blockquote {
   max-width: 75ch;
+  max-width: 50rem;
 }
 
 a {

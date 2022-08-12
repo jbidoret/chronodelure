@@ -12,28 +12,29 @@
   /* font-size: var(--big-size); */
   line-height: 1.4;
   padding: var(--padding) 0;
-  font-variation-settings: 'opsz' 65;
-  font-family: var(--basefamily);
+  font-variation-settings: "opsz" 65;
 }
 .decades {
   list-style-type: none;
-  margin: 0;  
+  margin: 0;
   padding: 0;
 }
 .decade {
   border-top: var(--borderstyle);
   scroll-margin-top: calc(var(--headerheight) - 3px);
 }
+.decade:first-child {
+  border-top: none;
+}
 #header ~ .decade {
   border-top: none;
 }
 .decade-header {
   display: grid;
-  grid-template-columns: 4fr 8fr  .5fr ;
+  grid-template-columns: 4fr 8fr 0.5fr;
   grid-gap: var(--margin);
-  padding-top: 2em;
-  margin-bottom: 2.5em;
-  /* display: none; */
+  /* padding-top: 2em; */
+  margin: 1.5em auto 2.5em;
 }
 /* @media (max-width:60rem) {
   .decade-header {  
@@ -45,42 +46,44 @@
 .decade-header > button {
   align-self: start;
   justify-self: start;
- 
 }
 .decade-title {
   font-size: 2.8em;
   font-weight: normal;
   word-spacing: -0.15em;
-  text-align: right
+  text-align: right;
 }
-.decade-intro{
-  font-family: var(--basefamily);
+.decade-intro {
   /* font-weight: 450; */
   line-height: 1.4;
   /* grid-column: 3/5; */
 }
 .decade-intro p {
-  font-weight: 200;
-  font-size: 1em;
+  /* font-weight: 200;
+  font-size: 1em; */
   margin: 0;
-  max-width: 100000ch;
-} 
+  max-width: none;
+  font-family: var(--serif);
+  font-size: calc(1rem * var(--fs-adjustment, 1));
+  line-height: calc(var(--line-height) * var(--lh-adjustment, 1) * 1.1);
+}
 
 .decade-subtitle {
-  font-family: var(--basefamily);
   font-size: var(--big-size);
-  margin:  3px 0 1em;
+  margin: 3px 0 1em;
   color: var(--accent-color);
   line-height: 1.1;
 }
-.visible a.decade-button { display: none;}
+.visible a.decade-button {
+  display: none;
+}
 .decade-button {
   border: 3px solid black;
-  padding: .25em .75em .05em;
+  padding: 0.25em 0.75em 0.05em;
   text-transform: uppercase;
-  font-family: var(--basefamily);
-  letter-spacing: .05em;
-  font-size: .85em;
+
+  letter-spacing: 0.05em;
+  font-size: 0.85em;
   background: none;
   border-radius: 1em;
   cursor: pointer;
@@ -88,7 +91,7 @@
   /* opacity: .5; */
   transition: all 150ms;
 }
-.decade-button:hover{
+.decade-button:hover {
   color: var(--accent-color);
 }
 .decade:hover .decade-button {

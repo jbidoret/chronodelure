@@ -27,10 +27,10 @@
 
 .main-text h3, .main-text h2 {
   /* wtf ? */
-  display: inline-flex;
+  /* display: inline-flex;
   overflow: hidden;
   position: relative;
-  line-height: 1.3;
+  line-height: 1.3; */
 }
 
 .gslide-image { background: white;}

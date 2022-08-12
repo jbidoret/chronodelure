@@ -1,13 +1,10 @@
 :root {
   --lh-adjustment:1;
   --fs-adjustment:1;
-  --basesize: calc(1rem * var(--fs-adjustment, 1));
-  --basefamily: 'Antique Olive', sans-serif;
-  /* --basefamily: 'National', sans-serif; */
-  --altfamily: 'Source Serif VF', serif;
-  --altfamily: 'Fern Web', serif;
-  --altfamily: 'Roboto Serif', serif;
-  --line-height: 1.2;
+  --basesize: 1rem;
+  --sans: 'Antique Olive', sans-serif;
+  --serif: 'Source Serif VF', serif;
+  --line-height: 1.25;
   --text-color: rgba(0, 0, 0, 0.75);
   --accent-color: #ff440b;
   --second-color: #1358d7;

@@ -2,255 +2,208 @@
   margin-bottom: var(--margin);
   position: relative;
 }
-#home .session-context p{
-  font-size: .85em;
+.session-context p {
+  font-size: 0.85em;
   font-variation-settings: "opsz" 10;
 }
-
 
 .session-context h3 {
   color: var(--second-color);
   line-height: var(--line-height);
 }
 
-
-
-
 .session-context p {
   max-width: 100%;
 }
 
-#home .session-context img {
+.session-context img {
   max-width: 90%;
 }
-
-
-.context-cover{
+.content-context p {
+  font-family: var(--serif);
+  font-size: calc(1rem * var(--fs-adjustment, 1));
+  line-height: calc(var(--line-height) * var(--lh-adjustment, 1));
+}
+.context-cover {
   margin: var(--padding) 0;
 }
 
-.context-source a{
+.context-source a {
   text-decoration: underline;
-  text-underline-offset: .25em;
+  text-underline-offset: 0.25em;
   text-decoration-color: var(--second-color);
 }
 
-
-
-
 /* HOME */
-.context-group{
-  position: relative; 
+.context-group {
+  position: relative;
 }
-.context-group .categorie::before{
+.context-group .categorie::before {
   content: "Contexte (typo)graphique";
-  font-family: var(--basefamily);
-  text-transform: uppercase; 
+
+  text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 0.6em;
   margin-bottom: 1.5em;
   display: block;
 }
-.context-group-technique .categorie::before{
+.context-group-technique .categorie::before {
   content: "Contexte technique";
 }
-.context-group-technique h3{
+.context-group-technique h3 {
   color: #1b5700;
 }
 
 /* Single page */
-[data-template="session"] [data-type="typographie"] h3{
+[data-template="session"] [data-type="typographie"] h3 {
   color: #1b5700;
 }
 
-
 /* desktop version */
 @media screen and (min-width: 1081px) {
-  #home .session-context h3 {
+  .session-context h3 {
     font-size: 0.8em;
   }
-  
-  #home  .session-context p{
-    font-size: .65em;
+
+  .session-context p {
+    font-size: 0.65em;
   }
 
+  .context-group {
+    margin-top: 2em;
+  }
 
+  .context-group-typographie {
+    text-align: right;
+  }
 
-.context-group{
-  margin-top: 2em;
+  .context-group-typographie img {
+    margin-left: 10%;
+  }
 }
-
-
-
-
-.context-group-typographie{
-  text-align: right;
-}
-
-.context-group-typographie img{
-  margin-left: 10%;
-}
-
-
-
-
-}
-
 
 @media screen and (min-width: 1200px) {
-  #home .session-context h3 {
+  .session-context h3 {
     font-size: 1em;
   }
-  
- #home .session-context p{
-    font-size: .85em;
+
+  .session-context p {
+    font-size: 0.85em;
   }
 }
-
 
 @media screen and (min-width: 1081px) {
-
-  .content-context{
-    display: block!important; 
+  .content-context {
+    display: block !important;
   }
-  .session-context button{
+  .session-context button {
     display: none;
-
   }
-
 }
-
-
-
-
 
 /* PHONE version */
 @media screen and (max-width: 1080px) {
-
-
-  .context-group .categorie::before{
+  .context-group .categorie::before {
     font-size: 0.6em;
   }
 
-  .session-context{
-    margin-bottom: 0; 
-    padding-bottom: 0; 
+  .session-context {
+    margin-bottom: 0;
+    padding-bottom: 0;
     cursor: pointer;
   }
 
-  .context-group{
-    margin-bottom: 2em; 
+  .context-group {
+    margin-bottom: 2em;
   }
 
-  .context-group .content-context h3{
-    position: relative; 
+  .context-group .content-context h3 {
+    position: relative;
     font-size: 0.9em;
-    cursor: pointer; 
+    cursor: pointer;
   }
 
-
-  .context-group .content-context{
+  .context-group .content-context {
     width: 100%;
-    padding: calc(var(--padding)*0.5);
-    margin-bottom: calc(var(--padding)*0.5);
-      border: 1px dotted #ccc;
-      background: none;
-      text-align: left;
+    padding: calc(var(--padding) * 0.5);
+    margin-bottom: calc(var(--padding) * 0.5);
+    border: 1px dotted #ccc;
+    background: none;
+    text-align: left;
   }
 
-
-  
-  .context-group .content-context:hover{
+  .context-group .content-context:hover {
     border-style: solid;
-
   }
-
-
-
 
   .context-group .context-introduction,
   .context-group .context-source,
   .context-group .close {
-    display: none; 
+    display: none;
   }
 
-  .context-group .context-cover{
+  .context-group .context-cover {
     margin: 0;
     margin-top: 1em;
   }
 
-
-  .content-context img{
+  .content-context img {
     max-width: 100%;
   }
 
-
-  .content-context h3{
-    font-size: 1.4em; 
-    padding-top: 0.5em; 
-  
+  .content-context h3 {
+    font-size: 1.4em;
+    padding-top: 0.5em;
   }
 
-  .content-context p{
-    font-size: 1em; 
+  .content-context p {
+    font-size: 1em;
   }
 
-  .session-context button img{
-    padding-top: calc(var(--padding)*0.5);
-    max-width: 100%!important;
+  .session-context button img {
+    padding-top: calc(var(--padding) * 0.5);
+    max-width: 100% !important;
     width: 100%;
   }
-
 }
 
-
-
-
 @media (max-width: 700px) {
-
-  .context-group{
+  .context-group {
     margin: 0;
     margin-bottom: var(--padding);
   }
 
-  .context-group .categorie::before{
+  .context-group .categorie::before {
     font-size: 0.5em;
     margin-bottom: 0.2em;
   }
 
-  .title-context{
-    margin-bottom: 0; 
+  .title-context {
+    margin-bottom: 0;
     font-size: 0.8em;
   }
-  .content-context{
+  .content-context {
     width: 80vw;
     left: 10vw;
     top: calc(var(--headerheight) + 2em);
   }
 
-  .context-group .categorie{
-    padding-bottom: calc(var(--padding)*0.5);
+  .context-group .categorie {
+    padding-bottom: calc(var(--padding) * 0.5);
   }
 
-  .session-context{
-    margin-top: calc(var(--padding)*0.5);
+  .session-context {
+    margin-top: calc(var(--padding) * 0.5);
   }
 
-  
-  .context-group{
-
+  .context-group {
     display: inline-block;
-    width: calc(50vw - var(--padding)*1);
+    width: calc(50vw - var(--padding) * 1);
     vertical-align: top;
-    padding-left: var(--padding)
-
+    padding-left: var(--padding);
   }
 
-  
-
-
-
-  .session-context:last-of-type h3::after{
+  .session-context:last-of-type h3::after {
     display: none;
   }
 
@@ -270,14 +223,11 @@
     align-items: center;
     flex-direction: row-reverse;
   }
-
 }
-
-
 
 /* POP UP FOR CONTEXTS ---- */
 
-#popup{
+#popup {
   display: none;
   width: 100vw;
   height: 100vh;
@@ -288,27 +238,26 @@
   z-index: 199999;
 }
 
-[data-popup-toggle="open"]{
-  display: block!important;
+[data-popup-toggle="open"] {
+  display: block !important;
 }
 
-#popup-content{
+#popup-content {
   max-width: 800px;
   height: 90vh;
   margin: 0 auto;
   margin-top: 5vh;
   background-color: white;
-  padding: calc(var(--padding)*2);
+  padding: calc(var(--padding) * 2);
   overflow: scroll;
-
 }
 
-#popup-content figure{
+#popup-content figure {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-#popup-close{ 
+#popup-close {
   font-size: 3em;
   font-weight: bold;
   width: 1em;
@@ -323,25 +272,23 @@
   cursor: pointer;
 }
 
-#popup h3{
+#popup h3 {
   padding-bottom: 0.5em;
 }
 
-@media screen and (max-width: 900px){
-  #popup-content{
+@media screen and (max-width: 900px) {
+  #popup-content {
     width: 100vw;
     max-width: 100vw;
     height: 100vh;
     margin-top: 0;
   }
 
-  #popup-close{
+  #popup-close {
     color: black;
   }
 
-  #popup h3{ 
+  #popup h3 {
     margin-top: 28px;
   }
-
-
 }

@@ -42,7 +42,7 @@
 
 .nav-decades li{
   margin-left: 1em;
-  font-family: var(--basefamily);
+  
   white-space: nowrap;
 }
 

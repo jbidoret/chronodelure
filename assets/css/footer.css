@@ -1,22 +1,16 @@
 #footer{
   border-top: var(--borderstyle);
   padding: var(--padding);
-  margin-bottom: 2em;
   font-size: .85em;
   background: #eaeaea;
 }
 #footer .max > * {
   margin: 1em 0;
 }
-.partners-logos{
-
-}
 #footer a {
   text-decoration: underline;
   text-underline-offset: .25em;
 }
-
-
 
 .partners-logos{
   display: flex;
