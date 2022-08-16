@@ -9,7 +9,7 @@ menutoggle.onclick = (e) => {
 /* CONTEXTES POP UP----------- */
 
 
-let contextes = document.querySelectorAll("#home .session-context");
+let contextes = document.querySelectorAll(".session-context");
 
 // create popup for contexts
 let body = document.querySelector("body");
@@ -34,15 +34,23 @@ asidePopup.appendChild(contentPopup);
 // toggle on click
 contextes.forEach(function (contexte, index) {
   contexte.onclick = (e) => {
-      console.log("cliqué !")
-      e.preventDefault();
+      // console.log("cliqué !")
+      if(e.target.classList != "A"){
+        e.preventDefault();
+      }
       let content = contexte.innerHTML;
+      console.log(content);
       asidePopup.dataset.popupToggle = "open";
       contentPopup.innerHTML = content;
       let image = contentPopup.querySelector("img");
-      console.log(image.dataset.popupImg);
+      // console.log(image.dataset.popupImg);
       image.src = image.dataset.popupImg;
       image.srcset = image.dataset.popupImg;
+
+      let sessioncontextdetails = contentPopup.querySelector(".session-context-details");
+      if(sessioncontextdetails){
+        contentPopup.prepend(sessioncontextdetails);
+      }
       disableScroll();
   };
 });
@@ -76,18 +84,20 @@ var wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewh
 
 // call this to Disable
 function disableScroll() {
-  window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
-  window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
-  window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
-  window.addEventListener('keydown', preventDefaultForScrollKeys, false);
+  document.body.style.overflow = "hidden";
+  // window.addEventListener('DOMMouseScroll', preventDefault, false); // older FF
+  // window.addEventListener(wheelEvent, preventDefault, wheelOpt); // modern desktop
+  // window.addEventListener('touchmove', preventDefault, wheelOpt); // mobile
+  // window.addEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 
 // call this to Enable
 function enableScroll() {
-  window.removeEventListener('DOMMouseScroll', preventDefault, false);
-  window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
-  window.removeEventListener('touchmove', preventDefault, wheelOpt);
-  window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
+  document.body.style.overflow = "unset";
+  // window.removeEventListener('DOMMouseScroll', preventDefault, false);
+  // window.removeEventListener(wheelEvent, preventDefault, wheelOpt); 
+  // window.removeEventListener('touchmove', preventDefault, wheelOpt);
+  // window.removeEventListener('keydown', preventDefaultForScrollKeys, false);
 }
 
 

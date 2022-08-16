@@ -53,7 +53,9 @@
 .context-group-technique h3 {
   color: #1b5700;
 }
-
+.context-introduction {
+  margin-bottom: 1em;
+}
 /* Single page */
 [data-template="session"] [data-type="typographie"] h3 {
   color: #1b5700;
@@ -209,7 +211,7 @@
 
   /* ajout Julien 28/07/2022 */
   .context-group .context-cover {
-    margin: 0;
+    margin: 0 1em 0 0;
     max-width: 25%;
   }
   .context-group {
@@ -282,7 +284,7 @@
 
 #popup .context-details {
   display: block;
-  margin-bottom: 1em;
+  margin: 2em 0;
 }
 #popup .details-link{
   display: none;
@@ -291,7 +293,9 @@
 #popup-details a {
   text-decoration: underline;
 }
-
+.context-details > * {
+  margin: 1em 0;
+}
 @media screen and (max-width: 900px) {
   #popup-content {
     width: 100vw;
