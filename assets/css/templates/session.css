@@ -553,7 +553,7 @@ h2 + .main-text {
     border-right: 1px solid #cfcfcf;
     padding-right: var(--margin);
   }
-  [data-template="session"] .session-context:last-of-type {
+  [data-template="session"] .session-context:nth-of-type(2n) {
     border-right: none;
     padding-right: 0;
   }

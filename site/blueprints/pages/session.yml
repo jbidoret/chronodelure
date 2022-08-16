@@ -83,7 +83,8 @@ tabs:
                   - link
                 label: Sous-titre
               text:
-                type: textarea
+                type: markdown
+                extends: fields/md
                 label: Texte
           tgl:
             type: toggle
