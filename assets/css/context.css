@@ -227,6 +227,10 @@
 
 /* POP UP FOR CONTEXTS ---- */
 
+.context-details {
+  display: none;
+}
+
 #popup {
   display: none;
   width: 100vw;
@@ -274,6 +278,18 @@
 
 #popup h3 {
   padding-bottom: 0.5em;
+}
+
+#popup .context-details {
+  display: block;
+  margin-bottom: 1em;
+}
+#popup .details-link{
+  display: none;
+}
+#popup-content a,
+#popup-details a {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 900px) {

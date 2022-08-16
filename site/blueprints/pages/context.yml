@@ -16,11 +16,15 @@ columns:
               technique: Contexte technique
               typographie: Contexte (typo)graphique
           introduction:
+            label: Introduction
+            type: markdown
+            extends: fields/minimal
+            # maxlength: 300
+            help: Maximum 250 caractères, visible initialement
+          details:
             label: Texte
             type: markdown
             extends: fields/md
-            # maxlength: 300
-            help: Maximum 250 caractères
   - width: 1/3
     sections:
       fields:
