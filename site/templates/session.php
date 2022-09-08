@@ -106,29 +106,31 @@
     <?php endif ?>
 
     <?php if ($page->lecturers()->isNotEmpty()) :?>
-            <aside class="session-lecturers main-text intervenants-bottom">
-              <h2>Intervenants </h2>
-              <ul>
-              <?php $lecturers = $page->lecturers()->split();
-              sort($lecturers);
-                foreach ($lecturers as $lecturer): ?>
-                <li><a href="<?= page("recherche")->url(['params' => ["tag"=> urlencode($lecturer) ]]) ?>"><?= $lecturer ?></a></li><?php endforeach ?>
-              </ul>
-            </aside>
-          <?php endif ?>          
-        </div>
+      <aside class="session-lecturers main-text intervenants-bottom">
+        <h2>Intervenants </h2>
+        <ul>
+        <?php $lecturers = $page->lecturers()->split();
+        sort($lecturers);
+          foreach ($lecturers as $lecturer): ?>
+          <li><a href="<?= page("recherche")->url(['params' => ["tag"=> urlencode($lecturer) ]]) ?>"><?= $lecturer ?></a></li><?php endforeach ?>
+        </ul>
+      </aside>
+    <?php endif ?>          
+  </div>
 
     <?php
     $contexts = $page->children()->listed()->template("context");
     if ($contexts->count()): ?>
-      <aside class="session-contexts">
-        <h3 class="session-contexts-title">Contexte</h3>
+      <div class="session-contexts-wrapper">
         <div class="max">
-          <?php foreach ($contexts as $context) :?>
-            <?php snippet("session-context", ["context"=>$context]) ?>
-          <?php endforeach ?>
+          <h3 class="session-contexts-title">Contexte</h3>
+          <aside class="session-contexts">
+            <?php foreach ($contexts as $context) :?>
+              <?php snippet("context", ["context"=>$context]) ?>
+            <?php endforeach ?>
+          </aside>
         </div>
-      </aside>
+      </div>
     <?php endif ?>
 
     <?php snippet("prevnext")?>

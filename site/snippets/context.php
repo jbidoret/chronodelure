@@ -1,8 +1,15 @@
-<div id="context-<?= $context->slug() ?>" class="session-context" data-type="<?php if ($context->category()->isNotEmpty()) :?><?= $context->category() ?><?php endif ?>">
+<div id="context-<?= $context->slug() ?>" class="context <?= r($context->category()->isNotEmpty(), 'context-'.$context->category(), '') ?> <?= r($context->details()->isNotEmpty(), 'context-has-details', '') ?>" data-href="<?= $context->url() ?>" data-type="<?php if ($context->category()->isNotEmpty()) :?><?= $context->category() ?><?php endif ?>">
 
-  <div class="content-context">
+  <div class="context-content ">
 
-    <h3>
+    <?php if ($context->cover()->isNotEmpty()) :?>
+      <figure class="context-cover">
+        <?php $image = $context->cover()->toFile() ?>
+          <img loading="lazy" width="<?= $image->width() ?>" height="<?= $image->height() ?>" src="<?= $image->thumb('small')->url()?>" alt="<?= $image->alt()?>" srcset="<?= $image->srcset('small')?>" data-popup-img="<?= $image->url() ?>">
+      </figure>
+    <?php endif ?>
+
+    <h3 class="context-title">
       <?= $context->title() ?>
       <?php if($kirby->user()): ?>
         <a href="<?= $context->panelUrl() ?>" class="editcontext" style="width:15px; padding-left:5px; display:inline-block">
@@ -17,31 +24,13 @@
       </div>
     <?php endif ?>
 
-    <?php if ($context->cover()->isNotEmpty()) :?>
-    <figure class="context-cover">
-      <?php $image = $context->cover()->toFile() ?>
-        <img loading="lazy" width="<?= $image->width() ?>" height="<?= $image->height() ?>" src="<?= $image->thumb('small')->url()?>" alt="<?= $image->alt()?>" srcset="<?= $image->srcset('small')?>" data-popup-img="<?= $image->url() ?>">
-    </figure>
-    <?php endif ?>
-
-    <?php if ($context->details()->isNotEmpty()):?>
-      <div class="context-details">
-        <?= $context->details()->kt()?>
-      </div>
-    <?php endif ?>
-
 
     <?php if ($context->link()->isNotEmpty() || $context->details()->isNotEmpty()):?>
       <p class="context-source">
-        <?php if ($context->details()->isNotEmpty()):?>
-          
-          <a href="#" class="details-link">
-          → en savoir +
-          </a>
+        <?php if ($context->details()->isNotEmpty()):?>          
+          <a href="<?= $context->url() ?>" class="details-link " data-height="80vh">→ en savoir +</a>
         <?php else: ?>
-          <a href="<?= $context->link() ?>">
-            → <?php $parse = parse_url($context->link()); echo $parse['host']; ?>
-          </a>
+          <a href="<?= $context->link() ?>" class="external">→ <?php $parse = parse_url($context->link()); echo $parse['host']; ?></a>
         <?php endif ?>
       </p>
     <?php endif ?>
