@@ -1,31 +1,44 @@
-.session-context {
+.context {
   margin-bottom: var(--margin);
   position: relative;
-}
-.session-context p {
-  font-size: 0.85em;
-  font-variation-settings: "opsz" 10;
+  cursor:zoom-in;
 }
 
-.session-context h3 {
-  color: var(--second-color);
+.context-category {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.6em;
+  margin-bottom: 1.5em;
+  display: block;
+  font-family: var(--sans);
+}
+
+.context-content {
+  font-family: var(--serif);
+}
+.context-title {
   line-height: var(--line-height);
+  font-family: var(--sans);
 }
 
-.session-context p {
-  max-width: 100%;
-}
+.context-technique .context-title { color: #1b5700; }
+.context-typographie .context-title { color: var(--second-color); }
 
-.session-context img {
+.context img {
   max-width: 90%;
 }
-.content-context p {
-  font-family: var(--serif);
-  font-size: calc(1rem * var(--fs-adjustment, 1));
+.context-content p { 
+  font-variation-settings: "opsz" 10;
+  max-width: 100%;
+  font-size: calc(.85rem * var(--fs-adjustment, 1));
   line-height: calc(var(--line-height) * var(--lh-adjustment, 1));
 }
 .context-cover {
   margin: var(--padding) 0;
+}
+
+.context-introduction {
+  margin-bottom: 1em;
 }
 
 .context-source a {
@@ -34,41 +47,32 @@
   text-decoration-color: var(--second-color);
 }
 
-/* HOME */
+/* Home page */
 .context-group {
   position: relative;
 }
-.context-group .categorie::before {
-  content: "Contexte (typo)graphique";
+.home-contexts .context-content {
+  display: flex;
+  flex-direction: column;  
+}
+.home-contexts .context-content figure { order: 2; }
+.home-contexts .context-content .context-introduction { order: 1; }
+.home-contexts .context-content .context-source { order: 3; }
 
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.6em;
-  margin-bottom: 1.5em;
-  display: block;
-}
-.context-group-technique .categorie::before {
-  content: "Contexte technique";
-}
-.context-group-technique h3 {
-  color: #1b5700;
-}
-.context-introduction {
-  margin-bottom: 1em;
-}
-/* Single page */
-[data-template="session"] [data-type="typographie"] h3 {
-  color: #1b5700;
+
+/* Session page */
+.session-contexts .context-cover {
+  float: right;
 }
 
 /* desktop version */
 @media screen and (min-width: 1081px) {
-  .session-context h3 {
+  .context-title {
     font-size: 0.85em;
   }
 
-  .session-context p {
-    font-size: 0.75em;
+  .context p {
+    /* font-size: 0.75em; */
   }
 
   .context-group {
@@ -85,31 +89,23 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .session-context h3 {
+  .context-title {
     font-size: 1em;
   }
 
-  .session-context p {
+  .context p {
     font-size: 0.85em;
   }
 }
 
-@media screen and (min-width: 1081px) {
-  .content-context {
-    display: block !important;
-  }
-  .session-context button {
-    display: none;
-  }
-}
 
 /* PHONE version */
 @media screen and (max-width: 1080px) {
-  .context-group .categorie::before {
+  .context-category {
     font-size: 0.6em;
   }
 
-  .session-context {
+  .context {
     margin-bottom: 0;
     padding-bottom: 0;
     cursor: pointer;
@@ -119,13 +115,13 @@
     margin-bottom: 2em;
   }
 
-  .context-group .content-context h3 {
+  .context-group .context-content h3 {
     position: relative;
     font-size: 0.9em;
     cursor: pointer;
   }
 
-  .context-group .content-context {
+  .context-group .context-content {
     width: 100%;
     padding: calc(var(--padding) * 0.5);
     margin-bottom: calc(var(--padding) * 0.5);
@@ -134,7 +130,7 @@
     text-align: left;
   }
 
-  .context-group .content-context:hover {
+  .context-group .context-content:hover {
     border-style: solid;
   }
 
@@ -149,20 +145,17 @@
     margin-top: 1em;
   }
 
-  .content-context img {
+  .context-content img {
     max-width: 100%;
   }
 
-  .content-context h3 {
+  .context-content h3 {
     font-size: 1.4em;
-    padding-top: 0.5em;
+    /* padding-top: 0.5em; */
   }
 
-  .content-context p {
-    font-size: 1em;
-  }
 
-  .session-context button img {
+  .context button img {
     padding-top: calc(var(--padding) * 0.5);
     max-width: 100% !important;
     width: 100%;
@@ -175,8 +168,8 @@
     margin-bottom: var(--padding);
   }
 
-  .context-group .categorie::before {
-    font-size: 0.5em;
+  .context-category {
+    /* font-size: 0.5em; */
     margin-bottom: 0.2em;
   }
 
@@ -184,18 +177,20 @@
     margin-bottom: 0;
     font-size: 0.8em;
   }
-  .content-context {
-    width: 80vw;
-    left: 10vw;
-    top: calc(var(--headerheight) + 2em);
+  .context-title {
+    padding-right: 45px;
   }
 
-  .context-group .categorie {
+  .context-category {
     padding-bottom: calc(var(--padding) * 0.5);
   }
 
-  .session-context {
+  .context {
     margin-top: calc(var(--padding) * 0.5);
+  }
+
+  .context-details p {
+    margin-bottom: 1em;
   }
 
   .context-group {
@@ -205,7 +200,7 @@
     padding-left: var(--padding);
   }
 
-  .session-context:last-of-type h3::after {
+  .context:last-of-type h3::after {
     display: none;
   }
 
@@ -219,7 +214,7 @@
     width: auto;
     padding: 0 var(--padding);
   }
-  .context-group .content-context {
+  .context-group .context-content {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -229,86 +224,72 @@
 
 /* POP UP FOR CONTEXTS ---- */
 
-.context-details {
-  display: none;
-}
-
-#popup {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 199999;
-}
-
-[data-popup-toggle="open"] {
-  display: block !important;
-}
-
-#popup-content {
-  max-width: 800px;
-  height: 90vh;
+.context-details figure img {
+  display: block;
   margin: 0 auto;
-  margin-top: 5vh;
-  background-color: white;
-  padding: calc(var(--padding) * 2);
-  overflow: scroll;
 }
 
-#popup-content figure {
+.glightbox-clean .gslide-media {
+  max-width: 800px;
+}
+
+.gslide-inline .ginlined-content {
+  padding: calc(var(--padding) * 2) !important;
+}
+.context-page figure {
   margin-top: 2em;
   margin-bottom: 2em;
 }
 
-#popup-close {
-  font-size: 3em;
-  font-weight: bold;
-  width: 1em;
-  height: 1em;
-  line-height: 0;
-  position: absolute;
-  right: 16px;
-  top: 16px;
-  background: none;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-#popup h3 {
+.context-page h3 {
   padding-bottom: 0.5em;
 }
-
-#popup .context-details {
-  display: block;
-  margin: 2em 0;
+.context-page .context-introduction p,
+.context-page .context-details p,
+.context-page .context-text p {
+  font-size: calc(1em * var(--fs-adjustment, 1));
+  margin-bottom: 1em;
 }
-#popup .details-link{
-  display: none;
-}
-#popup-content a,
-#popup-details a {
+  
+.context-page a {
   text-decoration: underline;
 }
 .context-details > * {
   margin: 1em 0;
 }
 @media screen and (max-width: 900px) {
-  #popup-content {
+  .glightbox-clean .gslide-media {
     width: 100vw;
     max-width: 100vw;
-    height: 100vh;
+    height: 100vh !important;
+    max-height: 100vh !important;
     margin-top: 0;
   }
 
-  #popup-close {
-    color: black;
-  }
-
-  #popup h3 {
+  .context-page h2,
+  .context-page h3:not(:first-child) {
     margin-top: 28px;
   }
+}
+
+
+/* context article */
+.context-article {
+  margin-top: 2em;
+}
+.context-article .max {
+  display: grid;
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 5fr 2fr;
+  grid-template-areas: "year title vide" "context image technique";
+  grid-row-gap: var(--padding);
+  grid-column-gap: calc(var(--margin) * 1.2);
+}
+.mini-session-title {
+  margin: 1em 0;
+}
+.context-article p, .context-article  blockquote {
+  max-width: 75ch;
+  max-width: 50rem;
 }

@@ -11,6 +11,10 @@
   text-decoration: underline;
   text-underline-offset: .25em;
 }
+#footer p {
+  line-height: 1.4;
+  color: rgba(0,0,0,.5);
+}
 
 .partners-logos{
   display: flex;

@@ -22,6 +22,10 @@ columns:
             # maxlength: 300
             help: Maximum 250 caractères, visible initialement
           details:
+            label: Détails
+            type: markdown
+            extends: fields/md
+          text:
             label: Texte
             type: markdown
             extends: fields/md
@@ -33,6 +37,13 @@ columns:
           cover:
             type: files
             multiple: false
+          hide_cover_in_popup:
+            type: toggle
+            label: Vignette cachée ?
+            text:
+              - Non
+              - Oui
+            help: Cacher la vignette dans la popup 
       files: 
         type: files
         headline: Fichiers
