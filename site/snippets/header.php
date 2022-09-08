@@ -10,7 +10,7 @@
   <?php snippet("header.metas") ?>
   
   <?= css("assets/fonts/fonts.css") ?>
-  <?= css(["assets/css/index.css?v2.3", "@auto"]) ?>
+  <?= css(["assets/css/index.css?v2.4", "@auto"]) ?>
   <?= css("assets/glightbox/glightbox.min.css") ?>
   <?php if (isset($_COOKIE["font"])) : $font = $_COOKIE["font"]; ?>
     <style>
