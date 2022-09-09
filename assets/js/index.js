@@ -27,6 +27,7 @@ contextes.forEach(function (link, index) {
           link.classList.remove('loading');
           const ajaxExample = GLightbox({ 
             selector: null,   
+            draggable: false,
             // touchNavigation: true,
             // loop: true,
             autoplayVideos: true,

@@ -13,9 +13,14 @@
 }
 .searching { pointer-events: none; }
 .searching ~ #search-overlay {display: block;}
-.searching  .logo, #menu, #search-bar{ pointer-events: all;}
+.searching .logo, #menu, #search-bar{ pointer-events: all;}
 .searching .nav-decades { display: none;}
-
+.searching .logo { visibility: hidden; display: none;}
+.searching #search-bar{
+  position: relative;
+  top: .25em;
+  flex: 1;
+}
 .search-button {
   background: transparent;
   border: none;

@@ -12,7 +12,7 @@ return function ($site) {
   } else {
     $tag = null;
     $query = get('q');
-    $results = $site->search($query, 'title|text|lecturers|readmores')->template('session');
+    $results = $site->search($query, 'title|text|lecturers|readmores')->template('session')->sortBy('year');
     $lecturers = $site->find("personnalites")->children()->listed();
     $ispeople = $lecturers->search($query, 'title');
   }

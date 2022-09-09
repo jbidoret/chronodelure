@@ -58,14 +58,12 @@
             $url = $p->url();
           }
           ?>
-          <li><a href="<?= $url ?>">
+          <li id="li-<?= $p->slug() ?>"><a href="<?= $url ?>">
           <?= explode( "–", $p->title()->text())[0] ?>
           </a></li>
         <?php endforeach ?>
         </ul>
 
-        <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false" tabindex="0"><span>menu</span></button>
-        
         <div id="search-bar">
           
           <button type="button" id="search-navbutton" class="search-button">
@@ -79,8 +77,11 @@
               <svg viewBox="0 0 24 24" sizes="" class="search-icon"><path fill="#000000" d="M17.121 15l5.598 5.597a.5.5 0 010 .707l-1.415 1.415a.5.5 0 01-.707 0L15 17.12 17.121 15z"></path><path fill="#16161d" fill-rule="evenodd" d="M10.5 19a8.5 8.5 0 100-17 8.5 8.5 0 000 17zm0-2.75a5.75 5.75 0 100-11.5 5.75 5.75 0 000 11.5z" clip-rule="evenodd"></path></svg>
             </button>
           </form>
-          </div>    
+        </div>    
+        
       </nav>
+        <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false" tabindex="0"><span>menu</span></button>
+        
     </div>
 
   </header>

@@ -241,8 +241,13 @@
   margin-bottom: 2em;
 }
 
-.context-page h3 {
-  padding-bottom: 0.5em;
+.context-page .context-title {
+  margin-bottom: 0.5em;
+}
+.context-page .context-cover {
+  margin: 2em calc(var(--margin) * -1);
+  background: #eaeaea;
+  padding: var(--margin);
 }
 .context-page .context-introduction p,
 .context-page .context-details p,
@@ -250,7 +255,10 @@
   font-size: calc(1em * var(--fs-adjustment, 1));
   margin-bottom: 1em;
 }
-  
+.context-page h2, .context-page h3 {
+  line-height: var(--line-height);
+  font-family: var(--sans);
+}  
 .context-page a {
   text-decoration: underline;
 }
@@ -271,7 +279,12 @@
     margin-top: 28px;
   }
 }
-
+.glightbox-container .gslide {
+	-webkit-user-select: auto !important;
+	-moz-user-select: auto !important;
+	-ms-user-select: auto !important;
+	user-select: auto !important;
+}
 
 /* context article */
 .context-article {
