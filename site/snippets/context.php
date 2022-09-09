@@ -3,9 +3,9 @@
   <div class="context-content ">
 
     <?php if ($context->cover()->isNotEmpty()) :?>
-      <figure class="context-cover">
-        <?php $image = $context->cover()->toFile() ?>
-          <img loading="lazy" width="<?= $image->width() ?>" height="<?= $image->height() ?>" src="<?= $image->thumb('small')->url()?>" alt="<?= $image->alt()?>" srcset="<?= $image->srcset('small')?>" data-popup-img="<?= $image->url() ?>">
+      <?php $image = $context->cover()->toFile() ?>
+      <figure class="context-cover <?= r($image->isPortrait(), 'is-portrait', '')?> ">
+        <img loading="lazy" width="<?= $image->width() ?>" height="<?= $image->height() ?>" src="<?= $image->thumb('small')->url()?>" alt="<?= $image->alt()?>" srcset="<?= $image->srcset('small')?>" data-popup-img="<?= $image->url() ?>">
       </figure>
     <?php endif ?>
 

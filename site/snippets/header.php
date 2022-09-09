@@ -10,7 +10,7 @@
   <?php snippet("header.metas") ?>
   
   <?= css("assets/fonts/fonts.css") ?>
-  <?= css(["assets/css/index.css?v2.4", "@auto"]) ?>
+  <?= css(["assets/css/index.css?v2.6", "@auto"]) ?>
   <?= css("assets/glightbox/glightbox.min.css") ?>
   <?php if (isset($_COOKIE["font"])) : $font = $_COOKIE["font"]; ?>
     <style>
@@ -49,9 +49,11 @@
         </a>
       </h1>
       
+      <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false" tabindex="0"><span>menu</span></button>
+        
       <nav id="nav" class="">
         <ul class="nav-decades">
-        <?php foreach ($site->children()->listed() as $p): 
+        <?php foreach ($site->children()->listed()->template("decade") as $p): 
           if($p->intendedTemplate() == "decade"){
             $url = $site->url() . "/#decade-" . $p->slug();  
           } else {
@@ -62,6 +64,12 @@
           <?= explode( "–", $p->title()->text())[0] ?>
           </a></li>
         <?php endforeach ?>
+        </ul>
+        <ul class="nav-about">
+          <?php $about = page("a-propos"); ?>
+          <li id="li-a-propos" >
+            <a href="<?= $about->url() ?>"><?= $about->title() ?></a>
+          </li>
         </ul>
 
         <div id="search-bar">
@@ -80,8 +88,6 @@
         </div>    
         
       </nav>
-        <button id="hamburger" class="hamburger" aria-label="Menu" aria-expanded="false" tabindex="0"><span>menu</span></button>
-        
     </div>
 
   </header>

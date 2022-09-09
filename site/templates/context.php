@@ -27,7 +27,7 @@
             <?php endif ?>
 
             <?php if ($page->cover()->isNotEmpty() && !$page->hide_cover_in_popup()->toBool()) :?>
-            <figure class="context-cover">
+            <figure class="context-cover <?= r($page->cover_on_white()->toBool(), 'cover-on-white', '') ?>">
               <?php $image = $page->cover()->toFile() ?>
               <img loading="lazy" width="<?= $image->width() ?>" height="<?= $image->height() ?>" src="<?= $image->thumb('cover')->url()?>" alt="<?= $image->alt()?>" srcset="<?= $image->srcset('cover')?>" data-popup-img="<?= $image->url() ?>">
             </figure>

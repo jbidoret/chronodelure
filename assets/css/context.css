@@ -27,6 +27,18 @@
 .context img {
   max-width: 90%;
 }
+.context .is-portrait {
+  text-align: right;
+}
+.context .is-portrait img {
+  max-width: 70%;
+}
+
+
+.context-typographie .is-portrait img {
+  float: right;
+}
+
 .context-content p { 
   font-variation-settings: "opsz" 10;
   max-width: 100%;
@@ -34,11 +46,11 @@
   line-height: calc(var(--line-height) * var(--lh-adjustment, 1));
 }
 .context-cover {
-  margin: var(--padding) 0;
+  margin: .5em 0 var(--padding) 0;
 }
 
 .context-introduction {
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 
 .context-source a {
@@ -249,6 +261,18 @@
   background: #eaeaea;
   padding: var(--margin);
 }
+.context-article .context-cover {
+  margin: 2em 0;
+}
+.context-page .context-cover img {
+  mix-blend-mode: multiply;
+}
+.context-page .cover-on-white  {
+  background: white;
+  padding: 0;
+}
+
+
 .context-page .context-introduction p,
 .context-page .context-details p,
 .context-page .context-text p {

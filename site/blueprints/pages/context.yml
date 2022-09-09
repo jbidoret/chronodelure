@@ -44,6 +44,13 @@ columns:
               - Non
               - Oui
             help: Cacher la vignette dans la popup 
+          cover_on_white:
+            type: toggle
+            label: Vignette sur blanc ?
+            text:
+              - Non
+              - Oui
+            help: Vignette sur fond blanc si case cochée
       files: 
         type: files
         headline: Fichiers

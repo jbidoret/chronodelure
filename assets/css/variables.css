@@ -14,7 +14,7 @@
   --yearwidth: calc(8.5em - var(--margin) / 2);
   --huge-size: 4em;
   --big-size : 1.5em;
-  --headerheight: calc( var(--basesize) * 1.5 * 2 + var(--padding) * 2 + 1px);
+  --headerheight: calc( var(--basesize) * var(--line-height) * 2 + var(--padding) * 2 + 1px);
   --borderstyle: 3px solid #ddd;
 }
 @media (max-width: 800px) {
