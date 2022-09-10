@@ -248,21 +248,11 @@
 .gslide-inline .ginlined-content {
   padding: calc(var(--padding) * 2) !important;
 }
-.context-page figure {
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
 
-.context-page .context-title {
-  margin-bottom: 0.5em;
-}
 .context-page .context-cover {
   margin: 2em calc(var(--margin) * -1);
   background: #eaeaea;
   padding: var(--margin);
-}
-.context-article .context-cover {
-  margin: 2em 0;
 }
 .context-page .context-cover img {
   mix-blend-mode: multiply;
@@ -273,6 +263,14 @@
 }
 
 
+.context-page figure {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.context-page .context-title {
+  margin-bottom: 0.5em;
+}
 .context-page .context-introduction p,
 .context-page .context-details p,
 .context-page .context-text p {
@@ -314,6 +312,9 @@
 .context-article {
   margin-top: 2em;
 }
+.context-article .context-cover {
+  margin: 2em 0;
+}
 .context-article .max {
   display: grid;
   position: relative;
@@ -322,6 +323,9 @@
   grid-template-areas: "year title vide" "context image technique";
   grid-row-gap: var(--padding);
   grid-column-gap: calc(var(--margin) * 1.2);
+}
+.context-article img {
+  max-width: 100%;
 }
 .mini-session-title {
   margin: 1em 0;

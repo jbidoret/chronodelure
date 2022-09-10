@@ -10,21 +10,11 @@ Footer: Ce site est dédié à la mise en valeur des archives de la programmatio
 
 ----
 
-Partners:
-
-Ce site a vu le jour grâce à la contribution de nombreuses Lursiennes et Lursiens et à l’investissement d’une équipe dédiée.  
-
-Ce projet a bénéficié d’une aide de l’(link: https://eur-artec.fr/ text: EUR ArTeC) financée par l’ANR au titre du PIA ANR-17-EURE-0008. (link: a-propos text: En savoir plus).
+Partners: 
 
 ----
 
-Logos:
-
-- 
-  logo:
-    - eur-artec.png
-  title: EUR ArTeC
-  url: https://eur-artec.fr/
+Logos: 
 
 ----
 

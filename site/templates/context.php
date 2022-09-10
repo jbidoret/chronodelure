@@ -41,7 +41,7 @@
 
             <?php if ($page->text()->isNotEmpty()):?>
               <div class="context-text">
-                <?= $page->text()->kt()?>
+                <?= $page->text()->kt() ?>
               </div>
             <?php endif ?>
 

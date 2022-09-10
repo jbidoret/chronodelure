@@ -543,12 +543,15 @@ h2 + .main-text {
 }
 
 .marker {
-  
   display: block;
   position: absolute;
   transform: translate(-50%, -50%);
   line-height: 1.5;
   box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+  display: none;
+}
+figure:hover .marker {
+  display: block;
 }
 
 .marker span {
