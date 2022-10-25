@@ -51,33 +51,6 @@
        url('source/SourceSerif4Variable-Italic.ttf') format('truetype');
 }
 
-/* national ? */
-
-@font-face {
-  font-family: 'National';
-  src: url('national/NationalWeb-Book.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'National';
-  src: url('national/NationalWeb-BookItalic.woff') format('woff');
-  font-weight: 700;
-  font-style: italic;
-}
-@font-face {
-  font-family: 'National';
-  src: url('national/NationalWeb-Light.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'National';
-  src: url('national/NationalWeb-LightItalic.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-}
-
 
 @font-face {
   src: url('fern/Fern_Web/fonts/FernVariable-Roman-VF.woff2') format("woff2"),
@@ -95,16 +68,3 @@
   font-weight: 400 800;
   }
 
-@font-face {
-  src: url('roboto/RobotoSerif.ttf') format("truetype");
-  font-family: 'Roboto Serif';
-  font-style: normal;
-  font-weight: 400 800;
-  }
-
-@font-face {
-  src: url('roboto/RobotoSerif-Italic.ttf') format("truetype");
-  font-family: 'Roboto Serif';
-  font-style: italic;
-  font-weight: 400 800;
-  }
