@@ -12,33 +12,29 @@
   <?= css("assets/fonts/fonts.css") ?>
   <?= css(["assets/css/index.css?v2.6", "@auto"]) ?>
   <?= css("assets/glightbox/glightbox.min.css") ?>
-  <?php if (isset($_COOKIE["font"])) : $font = $_COOKIE["font"]; ?>
-    <style>
-      :root {
-        --serif: <?= $font ?>, serif;
-        <?php switch ($font) {
-          case 'Fern Web':
-            echo '--lh-adjustment:1.1; --fs-adjustment:1.05}';
-            echo '#changefont-fern { background-color: var(--accent-color) }';
-            break;
-          case 'Source Serif VF':
-            echo '--lh-adjustment:1; --fs-adjustment:1;}';
-            echo '#changefont-source { background-color: var(--accent-color) }';
-            break;
-          case 'Roboto Serif':
-            echo '--lh-adjustment:1.1; --fs-adjustment:.96}';
-            echo '#changefont-roboto { background-color: var(--accent-color) }';
-            break;
-        } ?>
-      }
-    </style>
-  <?php endif ?>
+  <?php if (isset($_COOKIE["font"])) { $font = $_COOKIE["font"]; } else { $font="Fern Web"; } ?>
+  <style>
+    :root {
+      --serif: <?= $font ?>, serif;
+      <?php switch ($font) {
+        case 'Source Serif VF':
+          echo '--lh-adjustment:1; --fs-adjustment:1;}';
+          echo '#changefont-source { background-color: var(--accent-color) }';
+          break;
+        default:
+          echo '--lh-adjustment:1.1; --fs-adjustment:1.05}';
+          echo '#changefont-fern { background-color: var(--accent-color) }';
+          break;
+      } ?>
+    }
+  </style>
 </head>
 <body
-   data-slug="<?= $page->slug() ?>"
-   data-login="<?php e($kirby->user(), 'true', 'false') ?>"
-   data-template="<?php echo $page->template() ?>"
-   data-intended-template="<?php echo $page->intendedTemplate() ?>">
+  data-font ="<?= str::Slug($font) ?>"
+  data-slug="<?= $page->slug() ?>"
+  data-login="<?php e($kirby->user(), 'true', 'false') ?>"
+  data-template="<?php echo $page->template() ?>"
+  data-intended-template="<?php echo $page->intendedTemplate() ?>">
 
   <header id="header">
     <div class="max">

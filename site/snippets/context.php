@@ -22,7 +22,9 @@
 
     <?php if ($context->link()->isNotEmpty() || $context->details()->isNotEmpty()):?>
       <p class="context-source">
-        <?php if ($context->details()->isNotEmpty()):?>          
+        <?php if ($context->signature()->isNotEmpty()):?>          
+          <a href="<?= $context->url() ?>" class="details-link signed-context" data-height="80vh">→ poursuivre la lecture</a>
+        <?php elseif ($context->details()->isNotEmpty()):?>          
           <a href="<?= $context->url() ?>" class="details-link " data-height="80vh">→ aller plus loin</a>
         <?php else: ?>
           <a href="<?= $context->link() ?>" class="external">→ <?php $parse = parse_url($context->link()); echo $parse['host']; ?></a>

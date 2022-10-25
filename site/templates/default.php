@@ -6,17 +6,15 @@
       </div>
     </header>
     <article class="default-article">
-      <div class="max fontchanger">
-        <p>À l’occasion des 70<sup>e</sup> Rencontres internationales de Lure, la discussion fera rage autour du choix typographique de la Timelure. Cliquez sur les boutons ci-dessous, et rejoignez le débat&nbsp;:</p>
-        <p class="buttons">
-          <button class="changefont" id="changefont-source" data-font="Source Serif VF">Source Serif</button>
-          <button class="changefont" id="changefont-fern" data-font="Fern Web">Fern</button>
-          <button class="changefont" id="changefont-roboto" data-font="Roboto Serif">Roboto Serif</button>
-        </p>
-        
-      </div>
       <div class="max">
         <?= $page->text()->kt() ?>
+      </div>
+      <div class="max fontchanger">
+        <p>À l’occasion des 70<sup>e</sup> Rencontres internationales de Lure, le choix typographique de la Timelure fut déterminé collectivement. En complément de l’Antique Olive de Roger Excoffon, le <a href="https://djr.com/notes/junes-font-of-the-month-fern-text">Fern Text</a> de David Jonathan Ross a été choisi en tant que caractère de texte. Le Source Serif de Frank Grießhammer est maintenu comme alternative.</p>
+        <p class="buttons">
+          <button class="changefont" id="changefont-fern" data-font="Fern Web">Fern</button>
+          <button class="changefont" id="changefont-source" data-font="Source Serif VF">Source Serif</button>
+        </p>        
       </div>
     </article>
   </main>

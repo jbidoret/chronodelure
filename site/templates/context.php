@@ -35,15 +35,29 @@
 
             <?php if ($page->details()->isNotEmpty()):?>
               <div class="context-details">
-                <?= $page->details()->kt()?>
+                <?= $page->details()->withoutFootnotes()?>
               </div>
             <?php endif ?>
 
             <?php if ($page->text()->isNotEmpty()):?>
               <div class="context-text">
-                <?= $page->text()->kt() ?>
+                <?= $page->text()->withoutFootnotes() ?>
               </div>
             <?php endif ?>
+
+            <?php if ($page->signature()->isNotEmpty()):?>
+              <div class="context-signature">
+                <?= $page->signature()->kt() ?>
+              </div>
+            <?php endif ?>
+
+
+            <div class="context-details-footnotes">
+              <?= $page->details()->onlyFootnotes();?>
+            </div>
+            <div class="context-text-footnotes">
+              <?= $page->text()->onlyFootnotes();?>
+            </div>
 
 
             <?php if ($page->link()->isNotEmpty() ):?>

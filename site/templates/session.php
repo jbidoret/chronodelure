@@ -94,7 +94,7 @@
         <div class="gallery max">
           <?php foreach ($gallery as $image) : ?>     
           <figure class="<?= $image->layout() ?>">
-            <a href="<?= $image->url() ?>" class="glightbox">
+            <a href="<?= $image->url() ?>" class="glightbox" id="<?= str::Slug($image->name()) ?>">
               <img loading="lazy" width="<?= $image->width() ?>" height="<?= $image->height() ?>" src="<?= $image->thumb('default')->url()?>" alt="<?= $image->alt()?>" srcset="<?= $image->srcset('default')?>">
             </a>
             <?php foreach($image->markers()->toStructure() as $marker): ?>
