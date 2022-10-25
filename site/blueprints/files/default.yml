@@ -27,6 +27,7 @@ columns:
           layout:
             type: select
             label: Mise en page
+            default: one_of_one
             options:
               one_of_three: 1/3
               two_of_three: 2/3

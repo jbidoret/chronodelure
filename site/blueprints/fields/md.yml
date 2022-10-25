@@ -10,6 +10,7 @@ buttons:
   - file
   - invisibles
   - divider
+  - footnote
   ul: -
   - blockquote
 font: sans
