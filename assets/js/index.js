@@ -11,10 +11,15 @@ let contextes = document.querySelectorAll(".context");
 let body = document.querySelector("body");
 
 contextes.forEach(function (link, index) {
+  console.log(link);
   link.onclick = (e) => {
       // console.log("cliqué !")
+      if(link.matches("#context-content")) {
+        return false;
+      }
       // fetch context url, then inject a glightbox slide
       if(!e.target.matches(".external")){
+        
         e.preventDefault();
         link.classList.add('loading');
         var url = link.getAttribute("data-href");
@@ -61,6 +66,34 @@ const lightbox = GLightbox({
   closeEffect: "none"
 });
 
+lightbox.on('slide_changed', ({ prev, current }) => {
+  // Do something just one time
+  let { slideIndex, slideNode, slideConfig, player, trigger } = current;
+  let url = "#" + current.trigger.id;
+  const state = { 'slideIndex': slideIndex };
+  console.log(state);
+  history.pushState(state, null, url)
+});
+
+lightbox.on('close', () => {
+  let url = window.location.origin + window.location.pathname;
+  history.pushState(null, null, url);
+});
+
+lightbox.on('open', () => {
+  let url = window.location.origin + window.location.pathname;
+  history.pushState(null, null, url);
+});
+
+window.addEventListener('popstate', (event) => { 
+  console.log(`location: ${document.location}, state: ${JSON.stringify(event.state)}`);
+  if(event.state === null && lightbox){
+    lightbox.close();
+  }
+  if(event.state != null && lightbox && "slideIndex" in event.state){
+    lightbox.openAt(event.state.slideIndex)
+  }
+});
 
 // Search 
 var searchbutton = document.querySelector('#search-navbutton');
