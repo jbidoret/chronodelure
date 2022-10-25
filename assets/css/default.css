@@ -34,14 +34,14 @@ hr {
   border-bottom: 2px solid #ddd;
 }
 .fontchanger {
-  margin-bottom: 2em;
+  margin-top: 2em;
   
 }
-.fontchanger::after {
+.fontchanger::before {
   content: "";
   border-bottom: 2px solid #ddd;
   display: block;
-  margin-top: 2em;
+  margin-bottom: 2em;
 }
 .fontchanger button {
   background: black;
@@ -58,4 +58,8 @@ hr {
 .buttons :last-child {
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
+}
+body[data-font="fern-web"] #changefont-fern,
+body[data-font="source-serif-vf"] #changefont-source{
+  background-color: var(--accent-color);
 }

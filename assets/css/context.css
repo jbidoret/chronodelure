@@ -4,6 +4,9 @@
   cursor:zoom-in;
 }
 
+#context-content {
+  cursor: unset;
+}
 .context-category {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -43,7 +46,7 @@
   font-variation-settings: "opsz" 10;
   max-width: 100%;
   font-size: calc(.85rem * var(--fs-adjustment, 1));
-  line-height: calc(var(--line-height) * var(--lh-adjustment, 1));
+  line-height: calc(var(--line-height) * var(--lh-adjustment, 1) * 1.1);
 }
 .context-cover {
   margin: .5em 0 var(--padding) 0;
@@ -52,11 +55,23 @@
 .context-introduction {
   margin-bottom: .5em;
 }
+.context-page .context-introduction {
+  font-weight: bold;
+}
 
 .context-source a {
   text-decoration: underline;
   text-underline-offset: 0.25em;
   text-decoration-color: var(--second-color);
+}
+
+.context-source a.signed-context {
+  text-decoration: none;
+  background-color: var(--second-color);
+  color: white;
+  border-radius: 1em;
+  padding: .25em .75em;
+  font-weight: 500;
 }
 
 /* Home page */
@@ -246,11 +261,11 @@
 }
 
 .gslide-inline .ginlined-content {
-  padding: calc(var(--padding) * 2) !important;
+  padding: calc(var(--padding) * 3) !important;
 }
 
 .context-page .context-cover {
-  margin: 2em calc(var(--margin) * -1);
+  margin: 2em calc(var(--padding) * -3);
   background: #eaeaea;
   padding: var(--margin);
 }
@@ -269,17 +284,29 @@
 }
 
 .context-page .context-title {
+  font-size: 2em;
   margin-bottom: 0.5em;
+  margin-top: 1em;
 }
 .context-page .context-introduction p,
 .context-page .context-details p,
-.context-page .context-text p {
+.context-page .context-text p,
+.context-page .context-signature p {
   font-size: calc(1em * var(--fs-adjustment, 1));
   margin-bottom: 1em;
 }
 .context-page h2, .context-page h3 {
   line-height: var(--line-height);
   font-family: var(--sans);
+  margin: 1.5em 0 .5em;
+}  
+.context-page h2 {
+  font-size: 1.5em;
+  font-weight: normal;
+}  
+.context-page h3 {
+  font-size: 1.25em;
+  font-weight: bold;
 }  
 .context-page a {
   text-decoration: underline;
@@ -287,6 +314,16 @@
 .context-details > * {
   margin: 1em 0;
 }
+
+.context-signature::before {
+  content: "";
+  margin: 1em 0;
+  border-bottom: 2px solid #ddd;
+  
+  display: block;
+}
+
+
 @media screen and (max-width: 900px) {
   .glightbox-clean .gslide-media {
     width: 100vw;
@@ -333,4 +370,63 @@
 .context-article p, .context-article  blockquote {
   max-width: 75ch;
   max-width: 50rem;
+}
+
+
+/* ----------------------------------------------------------------------- images  */
+.context-page figcaption {
+  --padding: 1.5em;
+  font-size: 0.75em;
+  padding: .5em var(--padding);  
+  font-family: var(--sans);
+}
+
+.context-page figcaption p:first-child::before {
+  content: "↑ ";
+  width: var(--padding);
+  margin-left: calc(-1 * var(--padding));
+  display: inline-block;
+}
+.context-page .one_of_three,
+.context-page .two_of_three { }
+.context-page .one_of_three { width: calc((100% / 3) );}
+.context-page .two_of_three { width: calc((100% / 3 * 2)) ;}
+.context-page .one_of_two { width: 50%;}
+.context-page .one_of_two { width: 50%;}
+
+/* ----------------------------------------------------------------------- Footnotes  */
+
+sup.footnote {}         /* Footnote reference within text */
+.footnotes-container {} /* Footnotes container */
+.footnotes-list {
+  padding-left: 1em;
+}      /* Footnotes ordered list */
+.footnotes-list li {}   /* Footnote entry */
+.footnotereverse {}     /* Footnote back link ↩ */
+
+.context-text {
+  counter-reset: text
+}
+
+.context-text sup.footnote {
+  counter-increment: text;
+}
+
+@counter-style asterisks {
+  system: cyclic;
+  symbols: "*" "**" "***";
+  suffix: " ";
+}
+
+.context-text {
+  list-style: asterisks;
+}
+
+.context-text sup.footnote a span{ display: none}
+.context-text sup.footnote a::after {
+  content: counter(text, asterisks);
+}
+
+.context-text-footnotes .footnotes-list {
+  list-style-type: asterisks;
 }
