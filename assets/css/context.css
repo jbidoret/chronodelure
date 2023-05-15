@@ -66,11 +66,8 @@
 }
 
 .context-source a.signed-context {
-  text-decoration: none;
-  background-color: var(--second-color);
-  color: white;
+  color: var(--second-color);
   border-radius: 1em;
-  padding: .25em .75em;
   font-weight: 500;
 }
 
@@ -414,7 +411,7 @@ sup.footnote {}         /* Footnote reference within text */
 
 @counter-style asterisks {
   system: cyclic;
-  symbols: "*" "**" "***";
+  symbols: "*" "**" "⁂";
   suffix: " ";
 }
 
